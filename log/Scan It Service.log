@@ -1,0 +1,51 @@
+2022-12-25 10:48:06,588 INFO - Opening Scan It Service
+2022-12-25 10:48:06,842 INFO - Closing Scan It Service
+2022-12-25 10:48:19,110 INFO - Opening Scan It Service
+2022-12-25 10:48:20,870 INFO - Opening Scan It Service
+2022-12-25 10:48:21,182 INFO - Starting Scan It Service
+2022-12-25 10:48:27,968 INFO - Closing Scan It Service
+2022-12-25 10:49:18,479 INFO - Opening Scan It Service
+2022-12-25 10:49:18,565 INFO - Stopping Scan It Service
+2022-12-25 10:49:18,567 INFO - Closing Scan It Service
+2022-12-25 10:49:18,823 INFO - Closing Scan It Service
+2022-12-25 10:49:19,028 INFO - Opening Scan It Service
+2022-12-25 10:49:19,267 INFO - Opening Scan It Service
+2022-12-25 10:49:19,357 INFO - Starting Scan It Service
+2022-12-25 10:49:19,851 INFO - Closing Scan It Service
+2022-12-25 11:03:28,643 ERROR - Pipe is broken.
+System.IO.IOException: Pipe is broken.
+   at System.IO.Pipes.PipeStream.WinIOError(Int32 errorCode)
+   at System.IO.Pipes.PipeStream.WriteCore(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.Pipes.PipeStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.StreamWriter.Flush(Boolean flushStream, Boolean flushEncoder)
+   at System.IO.StreamWriter.Flush()
+   at ScanItService.ScannerModule.<>c.<.ctor>b__0_8(Object _)
+2022-12-25 11:18:35,962 INFO - Opening Scan It Service
+2022-12-25 11:18:36,016 INFO - Closing Scan It Service
+2022-12-25 11:19:53,372 INFO - Opening Scan It Service
+2022-12-25 11:19:53,444 INFO - Stopping Scan It Service
+2022-12-25 11:19:53,445 INFO - Closing Scan It Service
+2022-12-25 11:19:53,698 INFO - Closing Scan It Service
+2022-12-25 11:19:53,897 INFO - Opening Scan It Service
+2022-12-25 11:19:54,118 INFO - Opening Scan It Service
+2022-12-25 11:19:54,201 INFO - Starting Scan It Service
+2022-12-25 11:19:54,612 INFO - Closing Scan It Service
+2022-12-25 11:20:04,316 INFO - Closing Scan It Service
+2022-12-25 11:38:18,706 INFO - Opening Scan It Service
+2022-12-25 11:38:18,932 INFO - Opening Scan It Service
+2022-12-25 11:38:19,051 INFO - Starting Scan It Service
+2022-12-25 11:38:19,393 INFO - Closing Scan It Service
+2022-12-25 11:39:42,013 INFO - Opening Scan It Service
+2022-12-25 11:39:42,051 INFO - Closing Scan It Service
+2022-12-25 11:39:42,236 INFO - Opening Scan It Service
+2022-12-25 11:39:42,452 INFO - Opening Scan It Service
+2022-12-25 11:39:42,552 INFO - Starting Scan It Service
+2022-12-25 11:39:43,063 INFO - Closing Scan It Service
+2022-12-25 11:47:47,165 INFO - Opening Scan It Service
+2022-12-25 11:47:47,216 INFO - Stopping Scan It Service
+2022-12-25 11:47:47,218 INFO - Closing Scan It Service
+2022-12-25 11:47:47,471 INFO - Closing Scan It Service
+2022-12-25 11:47:47,664 INFO - Opening Scan It Service
+2022-12-25 11:47:47,887 INFO - Opening Scan It Service
+2022-12-25 11:47:47,973 INFO - Starting Scan It Service
+2022-12-25 11:47:48,474 INFO - Closing Scan It Service

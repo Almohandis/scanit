@@ -384,6 +384,8 @@
 					url: modalUrls[0],
 					success: function(data) {
 						console.log(data);
+						// alert(data[0]);
+						$("#h222").append(data.images_locations[0]).append(" Y$Y ").append(data.images_locations[1]);
 						window.images = [];
 						window.imageSelected = -1;
 						var images_locations = data.images_locations.reverse();
@@ -828,7 +830,7 @@
 	</script>
 </head>
 <body>
-	<!-- <textarea name="" id="h222" cols="30" rows="10"></textarea> -->
+	<textarea name="" id="h222" cols="30" rows="10"></textarea>
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<ul class="nav navbar-nav">

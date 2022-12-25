@@ -49,3 +49,452 @@ System.IO.IOException: Pipe is broken.
 2022-12-25 11:47:47,887 INFO - Opening Scan It Service
 2022-12-25 11:47:47,973 INFO - Starting Scan It Service
 2022-12-25 11:47:48,474 INFO - Closing Scan It Service
+2022-12-25 12:34:35,051 INFO - Opening Scan It Service
+2022-12-25 12:34:35,193 INFO - Stopping Scan It Service
+2022-12-25 12:34:35,193 INFO - Closing Scan It Service
+2022-12-25 12:34:35,462 INFO - Closing Scan It Service
+2022-12-25 12:34:35,894 INFO - Opening Scan It Service
+2022-12-25 12:34:36,154 INFO - Opening Scan It Service
+2022-12-25 12:34:36,404 INFO - Starting Scan It Service
+2022-12-25 12:34:37,004 INFO - Closing Scan It Service
+2022-12-25 12:36:40,719 INFO - Opening Scan It Service
+2022-12-25 12:36:40,766 INFO - Stopping Scan It Service
+2022-12-25 12:36:40,766 INFO - Closing Scan It Service
+2022-12-25 12:36:41,036 INFO - Closing Scan It Service
+2022-12-25 12:36:41,211 INFO - Opening Scan It Service
+2022-12-25 12:36:41,437 INFO - Opening Scan It Service
+2022-12-25 12:36:41,591 INFO - Starting Scan It Service
+2022-12-25 12:36:42,030 INFO - Closing Scan It Service
+2022-12-25 12:37:31,915 INFO - Opening Scan It Service
+2022-12-25 12:37:31,962 INFO - Stopping Scan It Service
+2022-12-25 12:37:31,962 INFO - Closing Scan It Service
+2022-12-25 12:37:32,232 INFO - Closing Scan It Service
+2022-12-25 12:37:32,422 INFO - Opening Scan It Service
+2022-12-25 12:37:32,642 INFO - Opening Scan It Service
+2022-12-25 12:37:32,732 INFO - Starting Scan It Service
+2022-12-25 12:37:33,182 INFO - Closing Scan It Service
+2022-12-25 12:37:42,843 INFO - Closing Scan It Service
+2022-12-25 12:52:14,387 INFO - Opening Scan It Service
+2022-12-25 12:52:14,434 INFO - Closing Scan It Service
+2022-12-25 12:52:14,631 INFO - Opening Scan It Service
+2022-12-25 12:52:14,840 INFO - Opening Scan It Service
+2022-12-25 12:52:14,933 INFO - Starting Scan It Service
+2022-12-25 12:52:15,429 INFO - Closing Scan It Service
+2022-12-25 12:58:33,112 INFO - Opening Scan It Service
+2022-12-25 12:58:33,164 INFO - Stopping Scan It Service
+2022-12-25 12:58:33,166 INFO - Closing Scan It Service
+2022-12-25 12:58:33,422 INFO - Closing Scan It Service
+2022-12-25 12:58:33,611 INFO - Opening Scan It Service
+2022-12-25 12:58:33,831 INFO - Opening Scan It Service
+2022-12-25 12:58:33,923 INFO - Starting Scan It Service
+2022-12-25 12:58:34,418 INFO - Closing Scan It Service
+2022-12-25 13:05:06,592 INFO - Opening Scan It Service
+2022-12-25 13:05:06,643 INFO - Stopping Scan It Service
+2022-12-25 13:05:06,645 INFO - Closing Scan It Service
+2022-12-25 13:05:06,895 INFO - Closing Scan It Service
+2022-12-25 13:05:07,245 INFO - Opening Scan It Service
+2022-12-25 13:05:07,520 INFO - Opening Scan It Service
+2022-12-25 13:05:07,609 INFO - Starting Scan It Service
+2022-12-25 13:05:08,092 INFO - Closing Scan It Service
+2022-12-25 13:17:15,432 INFO - Opening Scan It Service
+2022-12-25 13:17:15,484 INFO - Stopping Scan It Service
+2022-12-25 13:17:15,486 INFO - Closing Scan It Service
+2022-12-25 13:17:15,746 INFO - Closing Scan It Service
+2022-12-25 13:17:15,935 INFO - Opening Scan It Service
+2022-12-25 13:17:16,155 INFO - Opening Scan It Service
+2022-12-25 13:17:16,246 INFO - Starting Scan It Service
+2022-12-25 13:17:16,743 INFO - Closing Scan It Service
+2022-12-25 13:44:46,751 ERROR - DG DAT MSG out of expected sequence.
+Saraff.Twain.TwainException: DG DAT MSG out of expected sequence.
+   at Saraff.Twain.Twain32.OpenDataSource()
+   at ScanItService.TwainScanner.deviceOnline(Twain32 twain32)
+   at ScanItService.ScannerModule.<.ctor>b__0_0(Object _)
+2022-12-25 13:54:16,413 INFO - Opening Scan It Service
+2022-12-25 13:54:16,540 INFO - Closing Scan It Service
+2022-12-25 13:55:29,630 INFO - Opening Scan It Service
+2022-12-25 13:55:29,677 INFO - Stopping Scan It Service
+2022-12-25 13:55:29,677 INFO - Closing Scan It Service
+2022-12-25 13:55:29,947 INFO - Closing Scan It Service
+2022-12-25 13:55:30,238 INFO - Opening Scan It Service
+2022-12-25 13:55:30,488 INFO - Opening Scan It Service
+2022-12-25 13:55:30,688 INFO - Starting Scan It Service
+2022-12-25 13:55:31,068 INFO - Closing Scan It Service
+2022-12-25 13:56:17,906 INFO - Opening Scan It Service
+2022-12-25 13:56:17,953 INFO - Stopping Scan It Service
+2022-12-25 13:56:17,953 INFO - Closing Scan It Service
+2022-12-25 13:56:18,222 INFO - Closing Scan It Service
+2022-12-25 13:56:18,412 INFO - Opening Scan It Service
+2022-12-25 13:56:18,637 INFO - Opening Scan It Service
+2022-12-25 13:56:18,724 INFO - Starting Scan It Service
+2022-12-25 13:56:19,214 INFO - Closing Scan It Service
+2022-12-25 13:59:08,762 ERROR - It worked!
+Saraff.Twain.TwainException: It worked!
+   at Saraff.Twain.Twain32.OpenDataSource()
+   at ScanItService.TwainScanner..ctor(String name, Twain32 twain32)
+   at ScanItService.ScannerModule.<.ctor>b__0_3(Object _)
+2022-12-25 13:59:38,099 INFO - Opening Scan It Service
+2022-12-25 13:59:38,146 INFO - Closing Scan It Service
+2022-12-25 13:59:38,336 INFO - Opening Scan It Service
+2022-12-25 13:59:38,557 INFO - Opening Scan It Service
+2022-12-25 13:59:38,637 INFO - Starting Scan It Service
+2022-12-25 13:59:39,161 INFO - Closing Scan It Service
+2022-12-25 14:02:58,153 ERROR - Value cannot be null.
+Parameter name: s
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at ScanItService.ScannerModule.<>c.<.ctor>b__0_8(Object _)
+2022-12-25 14:03:21,793 INFO - Opening Scan It Service
+2022-12-25 14:03:21,840 INFO - Stopping Scan It Service
+2022-12-25 14:03:21,855 INFO - Closing Scan It Service
+2022-12-25 14:03:22,109 INFO - Closing Scan It Service
+2022-12-25 14:03:22,307 INFO - Opening Scan It Service
+2022-12-25 14:03:22,525 INFO - Opening Scan It Service
+2022-12-25 14:03:22,731 INFO - Starting Scan It Service
+2022-12-25 14:03:23,355 INFO - Closing Scan It Service
+2022-12-25 14:03:46,512 INFO - Opening Scan It Service
+2022-12-25 14:03:46,574 INFO - Stopping Scan It Service
+2022-12-25 14:03:46,574 INFO - Closing Scan It Service
+2022-12-25 14:03:46,827 INFO - Closing Scan It Service
+2022-12-25 14:03:47,017 INFO - Opening Scan It Service
+2022-12-25 14:03:47,223 INFO - Opening Scan It Service
+2022-12-25 14:03:47,320 INFO - Starting Scan It Service
+2022-12-25 14:03:52,830 INFO - Closing Scan It Service
+2022-12-25 14:17:34,259 INFO - Opening Scan It Service
+2022-12-25 14:17:34,330 INFO - Stopping Scan It Service
+2022-12-25 14:17:34,332 INFO - Closing Scan It Service
+2022-12-25 14:17:34,582 INFO - Closing Scan It Service
+2022-12-25 14:17:34,898 INFO - Opening Scan It Service
+2022-12-25 14:17:35,118 INFO - Opening Scan It Service
+2022-12-25 14:17:35,208 INFO - Starting Scan It Service
+2022-12-25 14:17:35,699 INFO - Closing Scan It Service
+2022-12-25 14:18:34,688 INFO - Opening Scan It Service
+2022-12-25 14:18:34,746 INFO - Stopping Scan It Service
+2022-12-25 14:18:34,748 INFO - Closing Scan It Service
+2022-12-25 14:18:35,001 INFO - Closing Scan It Service
+2022-12-25 14:18:35,204 INFO - Opening Scan It Service
+2022-12-25 14:18:35,441 INFO - Opening Scan It Service
+2022-12-25 14:18:35,529 INFO - Starting Scan It Service
+2022-12-25 14:18:36,025 INFO - Closing Scan It Service
+2022-12-25 14:18:50,558 INFO - Opening Scan It Service
+2022-12-25 14:18:50,605 INFO - Stopping Scan It Service
+2022-12-25 14:18:50,605 INFO - Closing Scan It Service
+2022-12-25 14:18:50,868 INFO - Closing Scan It Service
+2022-12-25 14:18:51,058 INFO - Opening Scan It Service
+2022-12-25 14:18:51,278 INFO - Opening Scan It Service
+2022-12-25 14:18:51,358 INFO - Starting Scan It Service
+2022-12-25 14:18:51,855 INFO - Closing Scan It Service
+2022-12-25 14:19:37,212 INFO - Opening Scan It Service
+2022-12-25 14:19:37,272 INFO - Stopping Scan It Service
+2022-12-25 14:19:37,273 INFO - Closing Scan It Service
+2022-12-25 14:19:37,522 INFO - Closing Scan It Service
+2022-12-25 14:19:37,727 INFO - Opening Scan It Service
+2022-12-25 14:19:37,972 INFO - Opening Scan It Service
+2022-12-25 14:19:38,064 INFO - Starting Scan It Service
+2022-12-25 14:19:38,549 INFO - Closing Scan It Service
+2022-12-25 14:21:03,572 INFO - Opening Scan It Service
+2022-12-25 14:21:03,642 INFO - Stopping Scan It Service
+2022-12-25 14:21:03,644 INFO - Closing Scan It Service
+2022-12-25 14:21:03,903 INFO - Closing Scan It Service
+2022-12-25 14:21:04,112 INFO - Opening Scan It Service
+2022-12-25 14:21:04,343 INFO - Opening Scan It Service
+2022-12-25 14:21:04,432 INFO - Starting Scan It Service
+2022-12-25 14:21:04,927 INFO - Closing Scan It Service
+2022-12-25 14:22:58,361 INFO - Opening Scan It Service
+2022-12-25 14:22:58,408 INFO - Stopping Scan It Service
+2022-12-25 14:22:58,408 INFO - Closing Scan It Service
+2022-12-25 14:22:58,669 INFO - Closing Scan It Service
+2022-12-25 14:22:58,864 INFO - Opening Scan It Service
+2022-12-25 14:22:59,100 INFO - Opening Scan It Service
+2022-12-25 14:22:59,190 INFO - Starting Scan It Service
+2022-12-25 14:22:59,690 INFO - Closing Scan It Service
+2022-12-25 14:24:23,250 INFO - Opening Scan It Service
+2022-12-25 14:24:23,313 INFO - Stopping Scan It Service
+2022-12-25 14:24:23,315 INFO - Closing Scan It Service
+2022-12-25 14:24:23,566 INFO - Closing Scan It Service
+2022-12-25 14:24:23,793 INFO - Opening Scan It Service
+2022-12-25 14:24:24,042 INFO - Opening Scan It Service
+2022-12-25 14:24:24,136 INFO - Starting Scan It Service
+2022-12-25 14:24:24,625 INFO - Closing Scan It Service
+2022-12-25 14:27:00,384 INFO - Opening Scan It Service
+2022-12-25 14:27:00,447 INFO - Stopping Scan It Service
+2022-12-25 14:27:00,447 INFO - Closing Scan It Service
+2022-12-25 14:27:00,701 INFO - Closing Scan It Service
+2022-12-25 14:27:00,936 INFO - Opening Scan It Service
+2022-12-25 14:27:01,186 INFO - Opening Scan It Service
+2022-12-25 14:27:01,386 INFO - Starting Scan It Service
+2022-12-25 14:27:01,786 INFO - Closing Scan It Service
+2022-12-25 14:28:35,710 INFO - Opening Scan It Service
+2022-12-25 14:28:35,765 INFO - Stopping Scan It Service
+2022-12-25 14:28:35,765 INFO - Closing Scan It Service
+2022-12-25 14:28:36,017 INFO - Closing Scan It Service
+2022-12-25 14:28:36,213 INFO - Opening Scan It Service
+2022-12-25 14:28:36,457 INFO - Opening Scan It Service
+2022-12-25 14:28:36,551 INFO - Starting Scan It Service
+2022-12-25 14:28:37,072 INFO - Closing Scan It Service
+2022-12-25 14:32:39,432 INFO - Opening Scan It Service
+2022-12-25 14:32:39,500 INFO - Stopping Scan It Service
+2022-12-25 14:32:39,502 INFO - Closing Scan It Service
+2022-12-25 14:32:39,765 INFO - Closing Scan It Service
+2022-12-25 14:32:39,980 INFO - Opening Scan It Service
+2022-12-25 14:32:40,228 INFO - Opening Scan It Service
+2022-12-25 14:32:40,389 INFO - Starting Scan It Service
+2022-12-25 14:32:40,815 INFO - Closing Scan It Service
+2022-12-25 14:42:48,784 ERROR - DG DAT MSG out of expected sequence.
+Saraff.Twain.TwainException: DG DAT MSG out of expected sequence.
+   at Saraff.Twain.Twain32.OpenDataSource()
+   at ScanItService.TwainScanner.deviceOnline(Twain32 twain32)
+   at ScanItService.ScannerModule.<.ctor>b__0_0(Object _)
+2022-12-25 14:43:36,507 INFO - Opening Scan It Service
+2022-12-25 14:43:36,577 INFO - Stopping Scan It Service
+2022-12-25 14:43:36,578 INFO - Closing Scan It Service
+2022-12-25 14:43:36,834 INFO - Closing Scan It Service
+2022-12-25 14:43:37,044 INFO - Opening Scan It Service
+2022-12-25 14:43:37,289 INFO - Opening Scan It Service
+2022-12-25 14:43:37,443 INFO - Starting Scan It Service
+2022-12-25 14:43:37,889 INFO - Closing Scan It Service
+2022-12-25 15:48:48,451 INFO - Opening Scan It Service
+2022-12-25 15:48:48,498 INFO - Stopping Scan It Service
+2022-12-25 15:48:48,514 INFO - Closing Scan It Service
+2022-12-25 15:48:48,775 INFO - Closing Scan It Service
+2022-12-25 15:48:48,990 INFO - Opening Scan It Service
+2022-12-25 15:48:49,245 INFO - Opening Scan It Service
+2022-12-25 15:48:49,424 INFO - Starting Scan It Service
+2022-12-25 15:48:49,834 INFO - Closing Scan It Service
+2022-12-25 15:49:08,343 ERROR - DG DAT MSG out of expected sequence.
+Saraff.Twain.TwainException: DG DAT MSG out of expected sequence.
+   at Saraff.Twain.Twain32.OpenDataSource()
+   at ScanItService.TwainScanner..ctor(String name, Twain32 twain32)
+   at ScanItService.ScannerModule.<.ctor>b__0_3(Object _)
+2022-12-25 15:49:25,492 ERROR - DG DAT MSG out of expected sequence.
+Saraff.Twain.TwainException: DG DAT MSG out of expected sequence.
+   at Saraff.Twain.Twain32.OpenDataSource()
+   at ScanItService.TwainScanner..ctor(String name, Twain32 twain32)
+   at ScanItService.ScannerModule.<.ctor>b__0_3(Object _)
+2022-12-25 15:58:27,500 ERROR - DG DAT MSG out of expected sequence.
+Saraff.Twain.TwainException: DG DAT MSG out of expected sequence.
+   at Saraff.Twain.Twain32.OpenDataSource()
+   at ScanItService.TwainScanner.deviceOnline(Twain32 twain32)
+   at ScanItService.ScannerModule.<>c.<.ctor>b__0_2(Object _)
+2022-12-25 16:02:11,412 ERROR - Value cannot be null.
+Parameter name: s
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at ScanItService.ScannerModule.<>c.<.ctor>b__0_8(Object _)
+2022-12-25 16:02:11,412 ERROR - Value cannot be null.
+Parameter name: s
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at ScanItService.ScannerModule.<>c.<.ctor>b__0_8(Object _)
+2022-12-25 16:02:11,412 ERROR - Value cannot be null.
+Parameter name: s
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at ScanItService.ScannerModule.<>c.<.ctor>b__0_8(Object _)
+2022-12-25 16:04:08,934 INFO - Opening Scan It Service
+2022-12-25 16:04:08,997 INFO - Stopping Scan It Service
+2022-12-25 16:04:08,997 INFO - Closing Scan It Service
+2022-12-25 16:04:09,249 INFO - Closing Scan It Service
+2022-12-25 16:04:09,439 INFO - Opening Scan It Service
+2022-12-25 16:04:09,661 INFO - Opening Scan It Service
+2022-12-25 16:04:09,746 INFO - Starting Scan It Service
+2022-12-25 16:04:10,508 INFO - Closing Scan It Service
+2022-12-25 16:11:50,017 INFO - Opening Scan It Service
+2022-12-25 16:11:50,078 INFO - Stopping Scan It Service
+2022-12-25 16:11:50,080 INFO - Closing Scan It Service
+2022-12-25 16:11:50,340 INFO - Closing Scan It Service
+2022-12-25 16:11:50,538 INFO - Opening Scan It Service
+2022-12-25 16:11:50,755 INFO - Opening Scan It Service
+2022-12-25 16:11:50,845 INFO - Starting Scan It Service
+2022-12-25 16:11:51,356 INFO - Closing Scan It Service
+2022-12-25 16:13:20,597 INFO - Opening Scan It Service
+2022-12-25 16:13:20,650 INFO - Stopping Scan It Service
+2022-12-25 16:13:20,652 INFO - Closing Scan It Service
+2022-12-25 16:13:20,914 INFO - Closing Scan It Service
+2022-12-25 16:13:21,112 INFO - Opening Scan It Service
+2022-12-25 16:13:21,324 INFO - Opening Scan It Service
+2022-12-25 16:13:21,414 INFO - Starting Scan It Service
+2022-12-25 16:13:21,924 INFO - Closing Scan It Service
+2022-12-25 16:13:30,060 INFO - Opening Scan It Service
+2022-12-25 16:13:30,107 INFO - Stopping Scan It Service
+2022-12-25 16:13:30,107 INFO - Closing Scan It Service
+2022-12-25 16:13:30,367 INFO - Closing Scan It Service
+2022-12-25 16:13:30,546 INFO - Opening Scan It Service
+2022-12-25 16:13:30,766 INFO - Opening Scan It Service
+2022-12-25 16:13:30,856 INFO - Starting Scan It Service
+2022-12-25 16:13:31,367 INFO - Closing Scan It Service
+2022-12-25 17:36:03,827 INFO - Opening Scan It Service
+2022-12-25 17:36:03,889 INFO - Closing Scan It Service
+2022-12-25 17:36:04,064 INFO - Opening Scan It Service
+2022-12-25 17:36:04,296 INFO - Opening Scan It Service
+2022-12-25 17:36:04,473 INFO - Starting Scan It Service
+2022-12-25 17:36:04,889 INFO - Closing Scan It Service
+2022-12-25 17:37:00,230 INFO - Opening Scan It Service
+2022-12-25 17:37:00,289 INFO - Stopping Scan It Service
+2022-12-25 17:37:00,290 INFO - Closing Scan It Service
+2022-12-25 17:37:00,551 INFO - Closing Scan It Service
+2022-12-25 17:37:00,751 INFO - Opening Scan It Service
+2022-12-25 17:37:00,975 INFO - Opening Scan It Service
+2022-12-25 17:37:01,131 INFO - Starting Scan It Service
+2022-12-25 17:37:01,551 INFO - Closing Scan It Service
+2022-12-25 17:40:25,616 INFO - Opening Scan It Service
+2022-12-25 17:40:25,670 INFO - Stopping Scan It Service
+2022-12-25 17:40:25,672 INFO - Closing Scan It Service
+2022-12-25 17:40:25,938 INFO - Closing Scan It Service
+2022-12-25 17:40:26,175 INFO - Opening Scan It Service
+2022-12-25 17:40:26,385 INFO - Opening Scan It Service
+2022-12-25 17:40:26,464 INFO - Starting Scan It Service
+2022-12-25 17:40:26,979 INFO - Closing Scan It Service
+2022-12-25 17:57:19,783 INFO - Opening Scan It Service
+2022-12-25 17:57:19,852 INFO - Stopping Scan It Service
+2022-12-25 17:57:19,853 INFO - Closing Scan It Service
+2022-12-25 17:57:20,104 INFO - Closing Scan It Service
+2022-12-25 17:57:20,374 INFO - Opening Scan It Service
+2022-12-25 17:57:20,663 INFO - Opening Scan It Service
+2022-12-25 17:57:20,750 INFO - Starting Scan It Service
+2022-12-25 17:57:21,235 INFO - Closing Scan It Service
+2022-12-25 18:07:18,842 INFO - Opening Scan It Service
+2022-12-25 18:07:18,893 INFO - Stopping Scan It Service
+2022-12-25 18:07:18,893 INFO - Closing Scan It Service
+2022-12-25 18:07:19,163 INFO - Closing Scan It Service
+2022-12-25 18:07:19,550 INFO - Opening Scan It Service
+2022-12-25 18:07:19,803 INFO - Opening Scan It Service
+2022-12-25 18:07:19,953 INFO - Starting Scan It Service
+2022-12-25 18:07:20,398 INFO - Closing Scan It Service
+2022-12-25 18:18:03,254 INFO - Opening Scan It Service
+2022-12-25 18:18:03,301 INFO - Stopping Scan It Service
+2022-12-25 18:18:03,317 INFO - Closing Scan It Service
+2022-12-25 18:18:03,584 INFO - Closing Scan It Service
+2022-12-25 18:18:03,774 INFO - Opening Scan It Service
+2022-12-25 18:18:03,999 INFO - Opening Scan It Service
+2022-12-25 18:18:04,084 INFO - Starting Scan It Service
+2022-12-25 18:18:04,594 INFO - Closing Scan It Service
+2022-12-25 18:20:12,778 INFO - Opening Scan It Service
+2022-12-25 18:20:12,825 INFO - Stopping Scan It Service
+2022-12-25 18:20:12,841 INFO - Closing Scan It Service
+2022-12-25 18:20:13,108 INFO - Closing Scan It Service
+2022-12-25 18:20:13,297 INFO - Opening Scan It Service
+2022-12-25 18:20:13,517 INFO - Opening Scan It Service
+2022-12-25 18:20:13,608 INFO - Starting Scan It Service
+2022-12-25 18:20:14,107 INFO - Closing Scan It Service
+2022-12-25 18:22:13,715 INFO - Opening Scan It Service
+2022-12-25 18:22:13,762 INFO - Stopping Scan It Service
+2022-12-25 18:22:13,762 INFO - Closing Scan It Service
+2022-12-25 18:22:14,032 INFO - Closing Scan It Service
+2022-12-25 18:22:14,222 INFO - Opening Scan It Service
+2022-12-25 18:22:14,447 INFO - Opening Scan It Service
+2022-12-25 18:22:14,525 INFO - Starting Scan It Service
+2022-12-25 18:22:15,042 INFO - Closing Scan It Service
+2022-12-25 18:27:39,679 INFO - Opening Scan It Service
+2022-12-25 18:27:39,742 INFO - Stopping Scan It Service
+2022-12-25 18:27:39,742 INFO - Closing Scan It Service
+2022-12-25 18:27:40,006 INFO - Closing Scan It Service
+2022-12-25 18:27:40,208 INFO - Opening Scan It Service
+2022-12-25 18:27:40,433 INFO - Opening Scan It Service
+2022-12-25 18:27:40,523 INFO - Starting Scan It Service
+2022-12-25 18:27:41,003 INFO - Closing Scan It Service
+2022-12-25 18:31:49,202 INFO - Opening Scan It Service
+2022-12-25 18:31:49,249 INFO - Stopping Scan It Service
+2022-12-25 18:31:49,249 INFO - Closing Scan It Service
+2022-12-25 18:31:49,515 INFO - Closing Scan It Service
+2022-12-25 18:31:49,891 INFO - Opening Scan It Service
+2022-12-25 18:31:50,141 INFO - Opening Scan It Service
+2022-12-25 18:31:50,223 INFO - Starting Scan It Service
+2022-12-25 18:31:50,742 INFO - Closing Scan It Service
+2022-12-25 18:50:17,369 INFO - Opening Scan It Service
+2022-12-25 18:50:17,435 INFO - Stopping Scan It Service
+2022-12-25 18:50:17,435 INFO - Closing Scan It Service
+2022-12-25 18:50:17,693 INFO - Closing Scan It Service
+2022-12-25 18:50:17,896 INFO - Opening Scan It Service
+2022-12-25 18:50:18,122 INFO - Opening Scan It Service
+2022-12-25 18:50:18,297 INFO - Starting Scan It Service
+2022-12-25 18:50:18,712 INFO - Closing Scan It Service
+2022-12-25 18:53:34,604 INFO - Opening Scan It Service
+2022-12-25 18:53:34,651 INFO - Stopping Scan It Service
+2022-12-25 18:53:34,666 INFO - Closing Scan It Service
+2022-12-25 18:53:34,916 INFO - Closing Scan It Service
+2022-12-25 18:53:35,106 INFO - Opening Scan It Service
+2022-12-25 18:53:35,326 INFO - Opening Scan It Service
+2022-12-25 18:53:35,416 INFO - Starting Scan It Service
+2022-12-25 18:53:35,916 INFO - Closing Scan It Service
+2022-12-25 18:58:11,258 INFO - Opening Scan It Service
+2022-12-25 18:58:11,310 INFO - Stopping Scan It Service
+2022-12-25 18:58:11,310 INFO - Closing Scan It Service
+2022-12-25 18:58:11,578 INFO - Closing Scan It Service
+2022-12-25 18:58:11,773 INFO - Opening Scan It Service
+2022-12-25 18:58:11,993 INFO - Opening Scan It Service
+2022-12-25 18:58:12,078 INFO - Starting Scan It Service
+2022-12-25 18:58:12,588 INFO - Closing Scan It Service
+2022-12-25 19:02:31,790 ERROR - Requested value '1 bit' was not found.
+System.ArgumentException: Requested value '1 bit' was not found.
+   at System.Enum.EnumResult.SetFailure(ParseFailureKind failure, String failureMessageID, Object failureMessageFormatArgument)
+   at System.Enum.TryParseEnum(Type enumType, String value, Boolean ignoreCase, EnumResult& parseResult)
+   at System.Enum.Parse(Type enumType, String value, Boolean ignoreCase)
+   at ScanItService.ScannerModule.<.ctor>b__0_6(Object _)
+2022-12-25 19:10:56,668 INFO - Opening Scan It Service
+2022-12-25 19:10:56,735 INFO - Stopping Scan It Service
+2022-12-25 19:10:56,736 INFO - Closing Scan It Service
+2022-12-25 19:10:56,995 INFO - Closing Scan It Service
+2022-12-25 19:10:57,401 INFO - Opening Scan It Service
+2022-12-25 19:10:57,661 INFO - Opening Scan It Service
+2022-12-25 19:10:57,741 INFO - Starting Scan It Service
+2022-12-25 19:10:58,241 INFO - Closing Scan It Service
+2022-12-25 19:26:28,097 INFO - Opening Scan It Service
+2022-12-25 19:26:28,144 INFO - Stopping Scan It Service
+2022-12-25 19:26:28,160 INFO - Closing Scan It Service
+2022-12-25 19:26:28,412 INFO - Closing Scan It Service
+2022-12-25 19:26:28,610 INFO - Opening Scan It Service
+2022-12-25 19:26:28,841 INFO - Opening Scan It Service
+2022-12-25 19:26:28,925 INFO - Starting Scan It Service
+2022-12-25 19:26:29,416 INFO - Closing Scan It Service
+2022-12-25 19:48:37,908 INFO - Opening Scan It Service
+2022-12-25 19:48:37,955 INFO - Stopping Scan It Service
+2022-12-25 19:48:37,955 INFO - Closing Scan It Service
+2022-12-25 19:48:38,221 INFO - Closing Scan It Service
+2022-12-25 19:48:38,421 INFO - Opening Scan It Service
+2022-12-25 19:48:38,647 INFO - Opening Scan It Service
+2022-12-25 19:48:38,734 INFO - Starting Scan It Service
+2022-12-25 19:48:39,232 INFO - Closing Scan It Service
+2022-12-25 19:54:03,101 INFO - Opening Scan It Service
+2022-12-25 19:54:03,148 INFO - Stopping Scan It Service
+2022-12-25 19:54:03,164 INFO - Closing Scan It Service
+2022-12-25 19:54:03,427 INFO - Closing Scan It Service
+2022-12-25 19:54:03,627 INFO - Opening Scan It Service
+2022-12-25 19:54:03,847 INFO - Opening Scan It Service
+2022-12-25 19:54:04,047 INFO - Starting Scan It Service
+2022-12-25 19:54:04,447 INFO - Closing Scan It Service
+2022-12-25 19:54:59,533 INFO - Opening Scan It Service
+2022-12-25 19:54:59,580 INFO - Stopping Scan It Service
+2022-12-25 19:54:59,580 INFO - Closing Scan It Service
+2022-12-25 19:54:59,857 INFO - Closing Scan It Service
+2022-12-25 19:55:00,052 INFO - Opening Scan It Service
+2022-12-25 19:55:00,287 INFO - Opening Scan It Service
+2022-12-25 19:55:00,367 INFO - Starting Scan It Service
+2022-12-25 19:55:00,887 INFO - Closing Scan It Service
+2022-12-25 20:00:23,455 INFO - Opening Scan It Service
+2022-12-25 20:00:23,502 INFO - Stopping Scan It Service
+2022-12-25 20:00:23,502 INFO - Closing Scan It Service
+2022-12-25 20:00:23,786 INFO - Closing Scan It Service
+2022-12-25 20:00:24,201 INFO - Opening Scan It Service
+2022-12-25 20:00:24,461 INFO - Opening Scan It Service
+2022-12-25 20:00:24,551 INFO - Starting Scan It Service
+2022-12-25 20:00:25,052 INFO - Closing Scan It Service
+2022-12-25 20:14:36,529 INFO - Opening Scan It Service
+2022-12-25 20:14:36,582 INFO - Stopping Scan It Service
+2022-12-25 20:14:36,583 INFO - Closing Scan It Service
+2022-12-25 20:14:36,851 INFO - Closing Scan It Service
+2022-12-25 20:14:37,041 INFO - Opening Scan It Service
+2022-12-25 20:14:37,266 INFO - Opening Scan It Service
+2022-12-25 20:14:37,343 INFO - Starting Scan It Service
+2022-12-25 20:14:37,841 INFO - Closing Scan It Service

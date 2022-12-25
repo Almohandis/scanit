@@ -181,6 +181,7 @@
 					dataType: "json",
 					url: modalUrls[0],
 					success: function(data) {
+						console.log(data);
 						for(scanner in data.scanners) {
 							$(".list-group").append("<a href='#' class='list-group-item'>"+ data.scanners[scanner] + "</a>");
 						}
@@ -189,6 +190,7 @@
 							dataType: "json",
 							url: modalUrls[1],
 							success: function(data) {
+								console.log(data);
 								$(".list-group>a").filter(function() {return $(this).text() == data.scanner;}).addClass("active");
 							},
 							error: function(xhr, status, error) {
@@ -223,6 +225,8 @@
 					dataType: "json",
 					url: modalUrls[0],
 					success: function(data) {
+						console.log(data);
+						// document.getElementById("h222").innerHTML = data;
 						if(data.feeder_enableds != null) {
 							$(".modal-body input[type=checkbox]:first").attr("data-on", data.feeder_enableds[0]);
 							$(".modal-body input[type=checkbox]:first").parent().find(".toggle-group>label:first").html(data.feeder_enableds[0]);
@@ -283,41 +287,43 @@
 							$(".modal-body input[type=checkbox]:eq(3)").bootstrapToggle("off");
 							$(".modal-body input[type=checkbox]:eq(3)").prop("disabled", true);
 						}
-						if(data.duplex_enableds != null) {
-							$(".modal-body input[type=checkbox]:eq(4)").attr("data-on", data.duplex_enableds[0]);
-							$(".modal-body input[type=checkbox]:eq(4)").parent().find(".toggle-group>label:first").html(data.duplex_enableds[0]);
-							$(".modal-body input[type=checkbox]:eq(4)").attr("data-off", data.duplex_enableds[1]);
-							$(".modal-body input[type=checkbox]:eq(4)").parent().find(".toggle-group>label:nth-child(2)").html(data.duplex_enableds[1]);
-							$(".modal-body input[type=checkbox]:eq(4)").bootstrapToggle();
-						}
-						else {
+						// if(data.duplex_enableds != null) {
+						// 	$(".modal-body input[type=checkbox]:eq(4)").attr("data-on", data.duplex_enableds[0]);
+						// 	$(".modal-body input[type=checkbox]:eq(4)").parent().find(".toggle-group>label:first").html(data.duplex_enableds[0]);
+						// 	$(".modal-body input[type=checkbox]:eq(4)").attr("data-off", data.duplex_enableds[1]);
+						// 	$(".modal-body input[type=checkbox]:eq(4)").parent().find(".toggle-group>label:nth-child(2)").html(data.duplex_enableds[1]);
+						// 	$(".modal-body input[type=checkbox]:eq(4)").bootstrapToggle();
+						// }
+						// else {
 							$(".modal-body input[type=checkbox]:eq(4)").attr("data-on", "Enabled");
 							$(".modal-body input[type=checkbox]:eq(4)").parent().find(".toggle-group>label:first").html("Enabled");
 							$(".modal-body input[type=checkbox]:eq(4)").attr("data-off", "Disabled");
 							$(".modal-body input[type=checkbox]:eq(4)").parent().find(".toggle-group>label:nth-child(2)").html("Disabled");
 							$(".modal-body input[type=checkbox]:eq(4)").bootstrapToggle("off");
 							$(".modal-body input[type=checkbox]:eq(4)").prop("disabled", true);
-						}
-						for(feeder_order in data.feeder_orders) {
-							$(".modal-body .dropdown:first>ul").append("<li><a href='#' class='text-center'>" + data.feeder_orders[feeder_order] +"</a></li>")
-						}
-						for(duplex in data.duplexes) {
-							$(".modal-body .dropdown:eq(1)>ul").append("<li><a href='#' class='text-center'>" + data.duplexes[duplex] +"</a></li>")
-						}
-						for(pixel_type in data.pixel_types) {
-							$(".modal-body .dropdown:eq(2)>ul").append("<li><a href='#' class='text-center'>" + data.pixel_types[pixel_type] +"</a></li>")
-						}
-						for(bit_depth in data.bit_depths) {
-							$(".modal-body .dropdown:eq(3)>ul").append("<li><a href='#' class='text-center'>" + data.bit_depths[bit_depth] +"</a></li>")
-						}
-						for(resolution in data.resolutions) {
-							$(".modal-body .dropdown:eq(4)>ul").append("<li><a href='#' class='text-center'>" + data.resolutions[resolution] +"</a></li>")
-						}
+						// }
+						// for(feeder_order in data.feeder_orders) {
+							$(".modal-body .dropdown:first>ul").append("<li><a href='#' class='text-center'>FirstPageFirst</a></li>")
+						// }
+						// for(duplex in data.duplexes) {
+						// 	$(".modal-body .dropdown:eq(1)>ul").append("<li><a href='#' class='text-center'>" + data.duplexes[duplex] +"</a></li>")
+						// }
+						// for(pixel_type in data.pixel_types) {
+							$(".modal-body .dropdown:eq(1)>ul").append("<li><a href='#' class='text-center'>RGB</a></li>")
+						// }
+						// for(bit_depth in data.bit_depths) {
+							$(".modal-body .dropdown:eq(2)>ul").append("<li><a href='#' class='text-center'>24 bit</a></li>")
+						// }
+						// for(resolution in data.resolutions) {
+							$(".modal-body .dropdown:eq(3)>ul").append("<li><a href='#' class='text-center'>200 dpi</a></li>")
+						// }
 						$.ajax({
 							type: "POST",
 							dataType: "json",
 							url: modalUrls[1],
 							success: function(data) {
+								console.log(455);
+								console.log(data);
 								if(data.feeder_enabled != null && data.auto_feed != null) {
 									$(".modal-body input[type=checkbox]:first").bootstrapToggle(data.feeder_enabled == "Enabled" ? "on" : "off");
 									$(".modal-body input[type=checkbox]:eq(1)").bootstrapToggle(data.feeder_enabled == "Enabled" && data.auto_feed == "Enabled" ? "on" : "off");
@@ -328,21 +334,21 @@
 								if(data.automatic_border_detection != null) {
 									$(".modal-body input[type=checkbox]:eq(3)").bootstrapToggle(data.automatic_border_detection == "Enabled" ? "on" : "off");
 								}
-								if(data.duplex_enabled != null) {
-									$(".modal-body input[type=checkbox]:eq(4)").bootstrapToggle(data.duplex_enabled == "Enabled" ? "on" : "off");
-								}
+								// if(data.duplex_enabled != null) {
+								// 	$(".modal-body input[type=checkbox]:eq(4)").bootstrapToggle(data.duplex_enabled == "Enabled" ? "on" : "off");
+								// }
 								if(data.feeder_order != null) {
 									$(".modal-body .dropdown:first>ul").parents(".dropdown").find(".btn").html("<span>" + data.feeder_order + "</span><span class='caret'></span>");
 								}
-								if(data.duplex != null) {
-									$(".modal-body .dropdown:eq(1)>ul").parents(".dropdown").find(".btn").html("<span>" + data.duplex + "</span><span class='caret'></span>");
-								}
-								$(".modal-body .dropdown:eq(2)>ul").parents(".dropdown").find(".btn").html("<span>" + data.pixel_type + "</span><span class='caret'></span>");
-								$(".modal-body .dropdown:eq(2)>ul").parents(".dropdown").find(".btn").val(data.pixel_type);
-								$(".modal-body .dropdown:eq(3)>ul").parents(".dropdown").find(".btn").html("<span>" + data.bit_depth + "</span><span class='caret'></span>");
-								$(".modal-body .dropdown:eq(3)>ul").parents(".dropdown").find(".btn").val(data.bit_depth);
-								$(".modal-body .dropdown:eq(4)>ul").parents(".dropdown").find(".btn").html("<span>" + data.resolution + "</span><span class='caret'></span>");
-								$(".modal-body .dropdown:eq(4)>ul").parents(".dropdown").find(".btn").val(data.resolution);
+								// if(data.duplex != null) {
+								// 	$(".modal-body .dropdown:eq(1)>ul").parents(".dropdown").find(".btn").html("<span>" + data.duplex + "</span><span class='caret'></span>");
+								// }
+								$(".modal-body .dropdown:eq(1)>ul").parents(".dropdown").find(".btn").html("<span>RGB</span><span class='caret'></span>");
+								$(".modal-body .dropdown:eq(1)>ul").parents(".dropdown").find(".btn").val("RGB");
+								$(".modal-body .dropdown:eq(2)>ul").parents(".dropdown").find(".btn").html("<span>24 bit</span><span class='caret'></span>");
+								$(".modal-body .dropdown:eq(2)>ul").parents(".dropdown").find(".btn").val("24 bit");
+								$(".modal-body .dropdown:eq(3)>ul").parents(".dropdown").find(".btn").html("<span>200 dpi</span><span class='caret'></span>");
+								$(".modal-body .dropdown:eq(3)>ul").parents(".dropdown").find(".btn").val("200 dpi");
 							},
 							error: function(xhr, status, error) {
 								try
@@ -377,14 +383,16 @@
 					dataType: "json",
 					url: modalUrls[0],
 					success: function(data) {
+						console.log(data);
 						window.images = [];
 						window.imageSelected = -1;
-						for(image_location in data.images_locations) {
-							window.images.unshift(new ScannedImage({htmlTag: $(".img-rounded"), location: data.images_locations[image_location], fitWidth: false, fitHeight: false, angle: 0}));
+						var images_locations = data.images_locations.reverse();
+						for(image_location in images_locations) {
+							window.images.unshift(new ScannedImage({htmlTag: $(".img-rounded"), location: images_locations[image_location], fitWidth: false, fitHeight: false, angle: 0}));
 							var image = new Image();
 							image.onload = function() {
-								if(image_location == data.images_locations.length - 1) {
-									for(var i = 0; i < data.images_locations.length; i++) {
+								if(image_location == images_locations.length - 1) {
+									for(var i = 0; i < images_locations.length; i++) {
 										window.images[i].setWidth(image.width);
 										window.images[i].setHeight(image.height);
 									}
@@ -403,9 +411,9 @@
 									$("#modal").modal("hide");
 								}
 							};
-							image.src = data.images_locations[image_location];
+							image.src = images_locations[image_location];
 						}
-						if(data.images_locations.length == 0) {
+						if(images_locations.length == 0) {
 							window.ajax = null;
 							$("nav a:gt(2)").addClass("disabled");
 							$("nav a:eq(4)").removeClass("disabled");
@@ -455,6 +463,7 @@
 					dataType: "json",
 					url: modalUrls[0],
 					success: function(data) {
+						console.log(data);
 						var content_deleted = data.content_deleted;
 						if(content_deleted) {
 							window.images = [];
@@ -606,6 +615,7 @@
 					dataType: "json",
 					url: url,
 					success: function(data) {
+						console.log(date);
 						window.images[window.imageSelected].setLocation(data.image_location);
 						$(".img-rounded").attr("src", window.images[window.imageSelected].getLocation());
 						$("nav a:eq(0), nav a:eq(1), nav a:eq(2), nav a:eq(3), nav a:eq(12), nav a:eq(13)").parent().removeClass("disabled");
@@ -637,6 +647,7 @@
 					dataType: "json",
 					url: url,
 					success: function(data) {
+						console.log(data);
 						window.images[window.imageSelected].setLocation(data.image_location);
 						$(".img-rounded").attr("src", window.images[window.imageSelected].getLocation());
 						$("nav a:eq(0), nav a:eq(1), nav a:eq(2), nav a:eq(3), nav a:eq(12), nav a:eq(13)").parent().removeClass("disabled");
@@ -712,8 +723,8 @@
 		$(".modal-body").delegate(".dropdown-menu li>a", "click", function(event) {
 			$(this).parents(".dropdown").find(".btn").html("<span>" + $(this).text() + "</span><span class='caret'></span>");
 			$(this).parents(".dropdown").find(".btn").val($(this).text());
-			if($(this).parents(".dropdown").is($(".modal-body .dropdown:eq(2)"))) {
-				var data = JSON.stringify({pixel_type: $(".modal-body .dropdown:eq(2)>ul").parents(".dropdown").find(".btn").val()});
+			if($(this).parents(".dropdown").is($(".modal-body .dropdown:eq(1)"))) {
+				var data = JSON.stringify({pixel_type: $(".modal-body .dropdown:eq(1)>ul").parents(".dropdown").find(".btn").val()});
 				$.ajax({
 					type: "POST",
 					contentType: "application/json",
@@ -721,12 +732,13 @@
 					dataType: "json",
 					url: "../get_available_bit_depths/",
 					success: function(data) {
-						$(".modal-body .dropdown:eq(3)>ul").html("");
-						for(bit_depth in data.bit_depths) {
-							$(".modal-body .dropdown:eq(3)>ul").append("<li><a href='#' class='text-center'>" + data.bit_depths[bit_depth] +"</a></li>")
-						}
-						$(".modal-body .dropdown:eq(3)>ul").parents(".dropdown").find(".btn").html("<span>" + data.bit_depth + "</span><span class='caret'></span>");
-						$(".modal-body .dropdown:eq(3)>ul").parents(".dropdown").find(".btn").val(data.bit_depth);
+						console.log(data);
+						$(".modal-body .dropdown:eq(2)>ul").html("");
+						// for(bit_depth in data.bit_depths) {
+							$(".modal-body .dropdown:eq(2)>ul").append("<li><a href='#' class='text-center'>24 bit</a></li>")
+						// }
+						$(".modal-body .dropdown:eq(2)>ul").parents(".dropdown").find(".btn").html("<span>24 bit</span><span class='caret'></span>");
+						$(".modal-body .dropdown:eq(2)>ul").parents(".dropdown").find(".btn").val("24 bit");
 					},
 					error: function(xhr, status, error) {
 						try
@@ -754,6 +766,7 @@
 					dataType: "json",
 					url: modalUrl,
 					success: function(data) {
+						console.log(data);
 						$("#modal").modal("hide");
 					},
 					error: function(xhr, status, error) {
@@ -770,7 +783,7 @@
 				});
 			}
 			else if($(".modal-title").text() == "Scanner Settings") {
-				var data = JSON.stringify({auto_discard_blank_pages: ($(".modal-body input[type=checkbox]:eq(2)").prop("checked") ? "Enabled": "Disabled"), auto_feed: ($(".modal-body input[type=checkbox]:eq(3)").prop("checked") ? "Enabled": "Disabled"), automatic_border_detection: ($(".modal-body input[type=checkbox]:eq(3)").prop("checked") ? "Enabled": "Disabled"), bit_depth: $(".modal-body .dropdown:eq(3)>ul").parents(".dropdown").find(".btn").val(), duplex_enabled: ($(".modal-body input[type=checkbox]:eq(4)").prop("checked") ? "Enabled": "Disabled"), duplex_order: $(".modal-body .dropdown:eq(1)>ul").parents(".dropdown").find(".btn").val(), feeder_enabled:($(".modal-body input[type=checkbox]:first").prop("checked") ? "Enabled": "Disabled"), feeder_order: $(".modal-body .dropdown:first>ul").parents(".dropdown").find(".btn").val(), pixel_type: $(".modal-body .dropdown:eq(2)>ul").parents(".dropdown").find(".btn").val(), resolution: $(".modal-body .dropdown:eq(4)>ul").parents(".dropdown").find(".btn").val()});
+				var data = JSON.stringify({auto_discard_blank_pages: ($(".modal-body input[type=checkbox]:eq(2)").prop("checked") ? "Enabled": "Disabled"), auto_feed: ($(".modal-body input[type=checkbox]:eq(3)").prop("checked") ? "Enabled": "Disabled"), automatic_border_detection: ($(".modal-body input[type=checkbox]:eq(3)").prop("checked") ? "Enabled": "Disabled"), bit_depth: $(".modal-body .dropdown:eq(2)>ul").parents(".dropdown").find(".btn").val(), feeder_enabled:($(".modal-body input[type=checkbox]:first").prop("checked") ? "Enabled": "Disabled"), feeder_order: $(".modal-body .dropdown:first>ul").parents(".dropdown").find(".btn").val(), pixel_type: $(".modal-body .dropdown:eq(1)>ul").parents(".dropdown").find(".btn").val(), resolution: $(".modal-body .dropdown:eq(3)>ul").parents(".dropdown").find(".btn").val()});
 				$.ajax({
 					type: "POST",
 					contentType: "application/json",
@@ -778,6 +791,7 @@
 					dataType: "json",
 					url: modalUrl,
 					success: function(data) {
+						console.log(data);
 						$("#modal").modal("hide");
 					},
 					error: function(xhr, status, error) {
@@ -814,6 +828,7 @@
 	</script>
 </head>
 <body>
+	<!-- <textarea name="" id="h222" cols="30" rows="10"></textarea> -->
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<ul class="nav navbar-nav">
@@ -823,7 +838,7 @@
 					</a>
 				</li>
 				<li class="navbar-left">
-					<a data-toggle="tooltip" data-placement="bottom" href="#" title="Scanner Settings" temp-title="Scanner Settings" modal-header="<button type='button' class='close'>&times;</button><h4 class='modal-title'>Scanner Settings</h4>" modal-body="<div class='row'> <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6' style='padding-bottom: 10px;'> <lable>Feeder:</label> <label class='checkbox-inline'> <input checked data-toggle='toggle' type='checkbox'  data-width='100'> </label> </div> <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6' style='padding-bottom: 10px;'> <lable>Auto Feed:</label> <label class='checkbox-inline'> <input checked data-toggle='toggle' type='checkbox'  data-width='100'> </label> </div> <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='padding-bottom: 10px;'> <lable>Feeder Order:</label> <div class='dropdown'> <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'> <span>Choose an Order</span> <span class='caret pull-right'></span> </button> <ul class='dropdown-menu'> </ul> </div> </div> <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='padding-bottom: 10px;'> <lable>Auto Discard Blank Pages:</label> <label class='checkbox-inline'> <input checked data-toggle='toggle' type='checkbox'  data-width='100'> </label> </div> <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='padding-bottom: 10px;'> <lable>Automatic Border Detection:</label> <label class='checkbox-inline'> <input checked data-toggle='toggle' type='checkbox'  data-width='100'> </label> </div> <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='padding-bottom: 10px;'> <lable>Duplex:</label> <label class='checkbox-inline'> <input checked data-toggle='toggle' type='checkbox'  data-width='100'> </label> </div> <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='padding-bottom: 10px;'> <lable>Duplex Order:</label> <div class='dropdown'> <button class='btn dropdown-toggle' type='button' data-toggle='dropdown' value='None'> <span>Choose an Order</span> <span class='caret pull-right'></span> </button> <ul class='dropdown-menu'> </ul> </div> </div> <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='padding-bottom: 10px;'> <lable>Color:</label> <div class='dropdown'> <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'> <span>Choose a Color</span> <span class='caret pull-right'></span> </button> <ul class='dropdown-menu'> </ul> </div> </div> <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='padding-bottom: 10px;'> <lable>Color Depth:</label> <div class='dropdown'> <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'> <span>Choose a Color Depth</span> <span class='caret pull-right'></span> </button> <ul class='dropdown-menu'> </ul> </div> </div> <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='padding-bottom: 10px;'> <lable>Resolution:</label> <div class='dropdown'> <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'> <span>Choose a Color Depth</span> <span class='caret pull-right'></span> </button> <ul class='dropdown-menu'> </ul> </div> </div> </div>" modal-footer="<button type='button' class='btn btn-default' style='width: 100px' modal-url='../set_properties/'>Ok</button><button type='button' class='btn btn-default' style='width: 100px'>Cancel</button>" modal-urls="../get_available_properties,../get_properties/">
+					<a data-toggle="tooltip" data-placement="bottom" href="#" title="Scanner Settings" temp-title="Scanner Settings" modal-header="<button type='button' class='close'>&times;</button><h4 class='modal-title'>Scanner Settings</h4>" modal-body="<div class='row'> <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6' style='padding-bottom: 10px;'> <lable>Feeder:</label> <label class='checkbox-inline'> <input checked data-toggle='toggle' type='checkbox'  data-width='100'> </label> </div> <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6' style='padding-bottom: 10px;'> <lable>Auto Feed:</label> <label class='checkbox-inline'> <input checked data-toggle='toggle' type='checkbox'  data-width='100'> </label> </div> <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='padding-bottom: 10px;'> <lable>Feeder Order:</label> <div class='dropdown'> <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'> <span>Choose an Order</span> <span class='caret pull-right'></span> </button> <ul class='dropdown-menu'> </ul> </div> </div> <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='padding-bottom: 10px;'> <lable>Auto Discard Blank Pages:</label> <label class='checkbox-inline'> <input checked data-toggle='toggle' type='checkbox'  data-width='100'> </label> </div> <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='padding-bottom: 10px;'> <lable>Automatic Border Detection:</label> <label class='checkbox-inline'> <input checked data-toggle='toggle' type='checkbox'  data-width='100'> </label> </div> <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='padding-bottom: 10px;'> <lable>Color:</label> <div class='dropdown'> <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'> <span>Choose a Color</span> <span class='caret pull-right'></span> </button> <ul class='dropdown-menu'> </ul> </div> </div> <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='padding-bottom: 10px;'> <lable>Color Depth:</label> <div class='dropdown'> <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'> <span>Choose a Color Depth</span> <span class='caret pull-right'></span> </button> <ul class='dropdown-menu'> </ul> </div> </div> <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='padding-bottom: 10px;'> <lable>Resolution:</label> <div class='dropdown'> <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'> <span>Choose a Color Depth</span> <span class='caret pull-right'></span> </button> <ul class='dropdown-menu'> </ul> </div> </div> </div>" modal-footer="<button type='button' class='btn btn-default' style='width: 100px' modal-url='../set_properties/'>Ok</button><button type='button' class='btn btn-default' style='width: 100px'>Cancel</button>" modal-urls="../get_available_properties,../get_properties/">
 						<img src="../content/img/scanner_settings.png" />
 					</a>
 				</li>
@@ -891,9 +906,9 @@
 					</a>
 				</li>
 				<li class="navbar-right">
-					<!-- <a class="disabled" data-toggle="tooltip" data-placement="bottom" href="#" title="Toggle Zoom" temp-title="Toggle Zoom">
+					<a class="disabled" data-toggle="tooltip" data-placement="bottom" href="#" title="Toggle Zoom" temp-title="Toggle Zoom">
 						<img src="../content/img/toggle_zoom.png" />
-					</a> -->
+					</a>
 					<a href="#" class="not_shown">
 						<img src="../content/img/test.png" />
 					</a>

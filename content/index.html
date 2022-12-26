@@ -144,13 +144,13 @@
 	var imageSelected = -1;
 
 	$(document).ready(function() {
-		if (window.opener != null || self !== top) {
-			$("nav a:eq(4)").removeClass("disabled");
-			$("nav a:eq(4)").removeClass("not_shown");
-			$("nav a:eq(4)").attr("title", "Exit");
-			$("nav a:eq(4)").attr("temp-title", "Exit");
-			$("nav a:eq(4)>img").attr("src", "../content/img/exit.png");
-		}
+		// if (window.opener != null || self !== top) {
+		// 	$("nav a:eq(4)").removeClass("disabled");
+		// 	$("nav a:eq(4)").removeClass("not_shown");
+		// 	$("nav a:eq(4)").attr("title", "Exit");
+		// 	$("nav a:eq(4)").attr("temp-title", "Exit");
+		// 	$("nav a:eq(4)>img").attr("src", "../content/img/exit.png");
+		// }
 
 		$("[data-toggle=tooltip]").tooltip({trigger: "hover"});
 
@@ -395,10 +395,8 @@
 							image.onload = function() {
 								if(image_location == images_locations.length - 1) {
 									for(var i = 0; i < images_locations.length; i++) {
-										// window.images[i].setWidth(image.width);
-										// window.images[i].setHeight(image.height);
-										console.log(image.width + "px");
-										console.log(image.height + "px");
+										window.images[i].setWidth(image.width);
+										window.images[i].setHeight(image.height);
 									}
 									window.ajax = null;
 									window.imageSelected = 0;
@@ -420,7 +418,7 @@
 						if(images_locations.length == 0) {
 							window.ajax = null;
 							$("nav a:gt(2)").addClass("disabled");
-							$("nav a:eq(4)").removeClass("disabled");
+							// $("nav a:eq(4)").removeClass("disabled");
 							$("li .navbar-text").html((window.imageSelected + 1) + " of " + window.images.length);
 							$("nav a:eq(12), nav a:eq(13), nav a:eq(14)").parent().removeClass("active");
 							$(".img-rounded").elevateZoom({zoomType: "inner", cursor: "zoom-in", zoomEnabled: $("nav a:eq(14)").parent().hasClass("active")});
@@ -443,7 +441,7 @@
 						window.images = [];
 						window.imageSelected = -1;
 						$("nav a:gt(2)").addClass("disabled");
-						$("nav a:eq(4)").removeClass("disabled");
+						// $("nav a:eq(4)").removeClass("disabled");
 						$("li .navbar-text").html((window.imageSelected + 1) + " of " + window.images.length);
 						$("nav a:eq(12), nav a:eq(13), nav a:eq(14)").parent().removeClass("active");
 						$(".img-rounded").elevateZoom({zoomType: "inner", cursor: "zoom-in", zoomEnabled: $("nav a:eq(14)").parent().hasClass("active")});
@@ -473,7 +471,7 @@
 							window.images = [];
 							window.imageSelected = -1;
 							$("nav a:gt(2)").addClass("disabled");
-							$("nav a:eq(4)").removeClass("disabled");
+							// $("nav a:eq(4)").removeClass("disabled");
 							$("li .navbar-text").html((window.imageSelected + 1) + " of " + window.images.length);
 							$("nav a:eq(12), nav a:eq(13), nav a:eq(14)").parent().removeClass("active");
 							$(".img-rounded").elevateZoom({zoomType: "inner", cursor: "zoom-in", zoomEnabled: $("nav a:eq(14)").parent().hasClass("active")});
@@ -856,7 +854,7 @@
 						<img src="../content/img/save.png" />
 					</a>
 				</li>
-				<li class="navbar-left">
+				<!-- <li class="navbar-left">
 					<a href="#" class="disabled" data-toggle="tooltip" data-placement="bottom" title="" temp-title="" modal-header="" modal-body="" modal-footer="" modal-urls="">
 						<img src="../content/img/test.png" />
 					</a>
@@ -865,7 +863,7 @@
 					<a href="#" class="not_shown">
 						<img src="../content/img/test.png" />
 					</a>
-				</li>
+				</li> -->
 				<li>
 					<a class="disabled" data-toggle="tooltip" data-placement="bottom" href="#" title="First Page" temp-title="First Page">
 						<img src="../content/img/first_page.png" />
@@ -913,15 +911,15 @@
 					<a class="disabled" data-toggle="tooltip" data-placement="bottom" href="#" title="Toggle Zoom" temp-title="Toggle Zoom">
 						<img src="../content/img/toggle_zoom.png" />
 					</a>
+					<!-- <a href="#" class="not_shown">
+						<img src="../content/img/test.png" />
+					</a> -->
+				</li>
+				<!-- <li class="navbar-right">
 					<a href="#" class="not_shown">
 						<img src="../content/img/test.png" />
 					</a>
-				</li>
-				<li class="navbar-right">
-					<a href="#" class="not_shown">
-						<img src="../content/img/test.png" />
-					</a>
-				</li>
+				</li> -->
 			</ul>
 		</div>
 	</nav>

@@ -315,7 +315,7 @@
 							$(".modal-body .dropdown:eq(2)>ul").append("<li><a href='#' class='text-center'>24 bit</a></li>")
 						// }
 						// for(resolution in data.resolutions) {
-							$(".modal-body .dropdown:eq(3)>ul").append("<li><a href='#' class='text-center'>200 dpi</a></li>")
+							$(".modal-body .dropdown:eq(3)>ul").append("<li><a href='#' class='text-center'>150 dpi</a></li>")
 						// }
 						$.ajax({
 							type: "POST",
@@ -347,8 +347,8 @@
 								$(".modal-body .dropdown:eq(1)>ul").parents(".dropdown").find(".btn").val("RGB");
 								$(".modal-body .dropdown:eq(2)>ul").parents(".dropdown").find(".btn").html("<span>24 bit</span><span class='caret'></span>");
 								$(".modal-body .dropdown:eq(2)>ul").parents(".dropdown").find(".btn").val("24 bit");
-								$(".modal-body .dropdown:eq(3)>ul").parents(".dropdown").find(".btn").html("<span>200 dpi</span><span class='caret'></span>");
-								$(".modal-body .dropdown:eq(3)>ul").parents(".dropdown").find(".btn").val("200 dpi");
+								$(".modal-body .dropdown:eq(3)>ul").parents(".dropdown").find(".btn").html("<span>150 dpi</span><span class='caret'></span>");
+								$(".modal-body .dropdown:eq(3)>ul").parents(".dropdown").find(".btn").val("150 dpi");
 							},
 							error: function(xhr, status, error) {
 								try
@@ -385,7 +385,7 @@
 					success: function(data) {
 						console.log(data);
 						// alert(data[0]);
-						$("#h222").append(data.images_locations[0]).append(" Y$Y ").append(data.images_locations[1]);
+						// $("#h222").append(data.images_locations[0]).append(" Y$Y ").append(data.images_locations[1]);
 						window.images = [];
 						window.imageSelected = -1;
 						var images_locations = data.images_locations.reverse();
@@ -395,8 +395,10 @@
 							image.onload = function() {
 								if(image_location == images_locations.length - 1) {
 									for(var i = 0; i < images_locations.length; i++) {
-										window.images[i].setWidth(image.width);
-										window.images[i].setHeight(image.height);
+										// window.images[i].setWidth(image.width);
+										// window.images[i].setHeight(image.height);
+										console.log(image.width + "px");
+										console.log(image.height + "px");
 									}
 									window.ajax = null;
 									window.imageSelected = 0;
@@ -830,7 +832,7 @@
 	</script>
 </head>
 <body>
-	<textarea name="" id="h222" cols="30" rows="10"></textarea>
+	<!-- <textarea name="" id="h222" cols="30" rows="10"></textarea> -->
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<ul class="nav navbar-nav">

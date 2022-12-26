@@ -156,7 +156,7 @@
 
 		$(window).bind("beforeunload", function(event){
 			if(window.closeAutomatically === "false") {
-				return "Are you sure you want to leave?";
+				return "هل أنت متأكد أنك تريد المغادرة؟";
 			}
 		});
 
@@ -164,7 +164,7 @@
 		    console.log("data = " + JSON.stringify(event.data));
 		});
 
-		$("nav a:lt(5)").click(function(event) {
+		$("nav a:lt(4)").click(function(event) {
 			if($(this).hasClass("disabled")) {
 				return false;
 			}
@@ -175,7 +175,8 @@
 			var modalFooter = $(this).attr("modal-footer");
 			$("#modal .modal-footer").html(modalFooter);
 			var modalUrls = $(this).attr("modal-urls").split(",");
-			if($(".modal-title").text() == "Select Scanner") {
+			console.log(modalUrls);
+			if($(".modal-title").text() == "اختيار الماسح الضوئي") {
 				$.ajax({
 					type: "POST",
 					dataType: "json",
@@ -200,7 +201,7 @@
 								}
 								catch(exception)
 								{
-									alert("Check that Scan It Service is running on your computer");
+									alert("الرجاء التأكد من أن برنامج الماسح الضوئي قيد التشغيل على جهازك");
 								}
 							}
 						});
@@ -214,7 +215,7 @@
 						}
 						catch(exception)
 						{
-							alert("Check that Scan It Service is running on your computer");
+							alert("الرجاء التأكد من أن برنامج الماسح الضوئي قيد التشغيل على جهازك");
 						}
 					}
 				});
@@ -226,7 +227,6 @@
 					url: modalUrls[0],
 					success: function(data) {
 						console.log(data);
-						// document.getElementById("h222").innerHTML = data;
 						if(data.feeder_enableds != null) {
 							$(".modal-body input[type=checkbox]:first").attr("data-on", data.feeder_enableds[0]);
 							$(".modal-body input[type=checkbox]:first").parent().find(".toggle-group>label:first").html(data.feeder_enableds[0]);
@@ -324,22 +324,22 @@
 							success: function(data) {
 								console.log(455);
 								console.log(data);
-								if(data.feeder_enabled != null && data.auto_feed != null) {
-									$(".modal-body input[type=checkbox]:first").bootstrapToggle(data.feeder_enabled == "Enabled" ? "on" : "off");
-									$(".modal-body input[type=checkbox]:eq(1)").bootstrapToggle(data.feeder_enabled == "Enabled" && data.auto_feed == "Enabled" ? "on" : "off");
-								}
-								if(data.auto_discard_blank_pages != null) {
-									$(".modal-body input[type=checkbox]:eq(2)").bootstrapToggle(data.auto_discard_blank_pages == "Enabled" ? "on" : "off");
-								}
-								if(data.automatic_border_detection != null) {
-									$(".modal-body input[type=checkbox]:eq(3)").bootstrapToggle(data.automatic_border_detection == "Enabled" ? "on" : "off");
-								}
+								// if(data.feeder_enabled != null && data.auto_feed != null) {
+									$(".modal-body input[type=checkbox]:first").bootstrapToggle("on");
+									$(".modal-body input[type=checkbox]:eq(1)").bootstrapToggle("on");
+								// }
+								// if(data.auto_discard_blank_pages != null) {
+									$(".modal-body input[type=checkbox]:eq(2)").bootstrapToggle("off"); // auto discard blank pages
+								// }
+								// if(data.automatic_border_detection != null) {
+									$(".modal-body input[type=checkbox]:eq(3)").bootstrapToggle("off"); // auto border detection
+								// }
 								// if(data.duplex_enabled != null) {
 								// 	$(".modal-body input[type=checkbox]:eq(4)").bootstrapToggle(data.duplex_enabled == "Enabled" ? "on" : "off");
 								// }
-								if(data.feeder_order != null) {
-									$(".modal-body .dropdown:first>ul").parents(".dropdown").find(".btn").html("<span>" + data.feeder_order + "</span><span class='caret'></span>");
-								}
+								// if(data.feeder_order != null) {
+								// 	$(".modal-body .dropdown:first>ul").parents(".dropdown").find(".btn").html("<span>" + data.feeder_order + "</span><span class='caret'></span>");
+								// }
 								// if(data.duplex != null) {
 								// 	$(".modal-body .dropdown:eq(1)>ul").parents(".dropdown").find(".btn").html("<span>" + data.duplex + "</span><span class='caret'></span>");
 								// }
@@ -401,13 +401,13 @@
 									window.ajax = null;
 									window.imageSelected = 0;
 									$("nav a:eq(3)").removeClass("disabled");
-									$("nav a:eq(6), nav a:eq(7)").addClass("disabled");
+									$("nav a:eq(4), nav a:eq(5)").addClass("disabled");
 									$("li .navbar-text").html((window.imageSelected + 1) + " of " + window.images.length);
 									if(window.images.length > 1) {
-										$("nav a:eq(8), nav a:eq(9)").removeClass("disabled");
+										$("nav a:eq(6), nav a:eq(7)").removeClass("disabled");
 									}
-									$("nav a:gt(9)").removeClass("disabled");
-									$("nav a:eq(12), nav a:eq(13)").parent().removeClass("active");
+									$("nav a:gt(7)").removeClass("disabled");
+									$("nav a:eq(10), nav a:eq(11)").parent().removeClass("active");
 									$(".img-rounded").rotate(0);
 									$(".img-rounded").attr("src", window.images[window.imageSelected].getLocation());
 									$("#modal").modal("hide");
@@ -420,8 +420,8 @@
 							$("nav a:gt(2)").addClass("disabled");
 							// $("nav a:eq(4)").removeClass("disabled");
 							$("li .navbar-text").html((window.imageSelected + 1) + " of " + window.images.length);
-							$("nav a:eq(12), nav a:eq(13), nav a:eq(14)").parent().removeClass("active");
-							$(".img-rounded").elevateZoom({zoomType: "inner", cursor: "zoom-in", zoomEnabled: $("nav a:eq(14)").parent().hasClass("active")});
+							$("nav a:eq(10), nav a:eq(11), nav a:eq(12)").parent().removeClass("active");
+							$(".img-rounded").elevateZoom({zoomType: "inner", cursor: "zoom-in", zoomEnabled: $("nav a:eq(12)").parent().hasClass("active")});
 							$(".img-rounded").rotate(0);
 							$(".img-rounded").attr("src", "../content/img/a4.png");
 							$("#modal").modal("hide");
@@ -436,15 +436,15 @@
 						}
 						catch(exception)
 						{
-							alert("Check that Scan It Service is running on your computer");
+							alert("الرجاء التأكد من أن برنامج الماسح الضوئي قيد التشغيل على جهازك");
 						}
 						window.images = [];
 						window.imageSelected = -1;
 						$("nav a:gt(2)").addClass("disabled");
 						// $("nav a:eq(4)").removeClass("disabled");
 						$("li .navbar-text").html((window.imageSelected + 1) + " of " + window.images.length);
-						$("nav a:eq(12), nav a:eq(13), nav a:eq(14)").parent().removeClass("active");
-						$(".img-rounded").elevateZoom({zoomType: "inner", cursor: "zoom-in", zoomEnabled: $("nav a:eq(14)").parent().hasClass("active")});
+						$("nav a:eq(10), nav a:eq(11), nav a:eq(12)").parent().removeClass("active");
+						$(".img-rounded").elevateZoom({zoomType: "inner", cursor: "zoom-in", zoomEnabled: $("nav a:eq(12)").parent().hasClass("active")});
 						$(".img-rounded").rotate(0);
 						$(".img-rounded").attr("src", "../content/img/a4.png");
 						$("#modal").modal("hide");
@@ -473,8 +473,8 @@
 							$("nav a:gt(2)").addClass("disabled");
 							// $("nav a:eq(4)").removeClass("disabled");
 							$("li .navbar-text").html((window.imageSelected + 1) + " of " + window.images.length);
-							$("nav a:eq(12), nav a:eq(13), nav a:eq(14)").parent().removeClass("active");
-							$(".img-rounded").elevateZoom({zoomType: "inner", cursor: "zoom-in", zoomEnabled: $("nav a:eq(14)").parent().hasClass("active")});
+							$("nav a:eq(10), nav a:eq(11), nav a:eq(12)").parent().removeClass("active");
+							$(".img-rounded").elevateZoom({zoomType: "inner", cursor: "zoom-in", zoomEnabled: $("nav a:eq(12)").parent().hasClass("active")});
 							$(".img-rounded").attr("src", "../content/img/a4.png");
 						}
 						delete data["content_deleted"];
@@ -502,36 +502,28 @@
 					}
 				});
 			}
-			else if($(this).attr("temp-title") == "Exit") {
-				if (self !== top) {
-					parent.postMessage("Close Me", "*");
-				}
-				else {
-					window.close();
-				}
-			}
 		});
 
-		$("nav a:gt(5)").click(function(event) {
+		$("nav a:gt(3)").click(function(event) {
 			if($(this).hasClass("disabled")) {
 				return false;
 			}
 			else if($(this).attr("temp-title") == "First Page") {
 				window.imageSelected = 0;
-				$("nav a:eq(6), nav a:eq(7)").addClass("disabled");
+				$("nav a:eq(4), nav a:eq(5)").addClass("disabled");
 				$("li .navbar-text").html((window.imageSelected + 1) + " of " + window.images.length);
-				$("nav a:eq(8), nav a:eq(9)").removeClass("disabled");
+				$("nav a:eq(6), nav a:eq(7)").removeClass("disabled");
 				if(window.images[window.imageSelected].getFitWidth()) {
-					$("nav a:eq(13)").parent().addClass("active");
+					$("nav a:eq(11)").parent().addClass("active");
 				}
 				else {
-					$("nav a:eq(13)").parent().removeClass("active");
+					$("nav a:eq(11)").parent().removeClass("active");
 				}
 				if(window.images[window.imageSelected].getFitHeight()) {
-					$("nav a:eq(12)").parent().addClass("active");
+					$("nav a:eq(10)").parent().addClass("active");
 				}
 				else {
-					$("nav a:eq(12)").parent().removeClass("active");
+					$("nav a:eq(10)").parent().removeClass("active");
 				}
 				$(".img-rounded").rotate(window.images[window.imageSelected].getAngle());
 				$(".img-rounded").attr("src", window.images[window.imageSelected].getLocation());
@@ -539,63 +531,63 @@
 			else if($(this).attr("temp-title") == "Previous Page") {
 				window.imageSelected = window.imageSelected - 1;
 				if(window.imageSelected == 0) {
-					$("nav a:eq(6), nav a:eq(7)").addClass("disabled");
+					$("nav a:eq(4), nav a:eq(5)").addClass("disabled");
 				}
 				$("li .navbar-text").html((window.imageSelected + 1) + " of " + window.images.length);
-				$("nav a:eq(8), nav a:eq(9)").removeClass("disabled");
+				$("nav a:eq(6), nav a:eq(7)").removeClass("disabled");
 				if(window.images[window.imageSelected].getFitWidth()) {
-					$("nav a:eq(13)").parent().addClass("active");
+					$("nav a:eq(11)").parent().addClass("active");
 				}
 				else {
-					$("nav a:eq(13)").parent().removeClass("active");
+					$("nav a:eq(11)").parent().removeClass("active");
 				}
 				if(window.images[window.imageSelected].getFitHeight()) {
-					$("nav a:eq(12)").parent().addClass("active");
+					$("nav a:eq(10)").parent().addClass("active");
 				}
 				else {
-					$("nav a:eq(12)").parent().removeClass("active");
+					$("nav a:eq(10)").parent().removeClass("active");
 				}
 				$(".img-rounded").rotate(window.images[window.imageSelected].getAngle());
 				$(".img-rounded").attr("src", window.images[window.imageSelected].getLocation());
 			}
 			else if($(this).attr("temp-title") == "Next Page") {
 				window.imageSelected = window.imageSelected + 1;
-				$("nav a:eq(6), nav a:eq(7)").removeClass("disabled");
+				$("nav a:eq(4), nav a:eq(5)").removeClass("disabled");
 				$("li .navbar-text").html((window.imageSelected + 1) + " of " + window.images.length);
 				if(window.imageSelected == window.images.length - 1) {
-					$("nav a:eq(8), nav a:eq(9)").addClass("disabled");
+					$("nav a:eq(6), nav a:eq(7)").addClass("disabled");
 				}
 				if(window.images[window.imageSelected].getFitWidth()) {
-					$("nav a:eq(13)").parent().addClass("active");
+					$("nav a:eq(11)").parent().addClass("active");
 				}
 				else {
-					$("nav a:eq(13)").parent().removeClass("active");
+					$("nav a:eq(11)").parent().removeClass("active");
 				}
 				if(window.images[window.imageSelected].getFitHeight()) {
-					$("nav a:eq(12)").parent().addClass("active");
+					$("nav a:eq(10)").parent().addClass("active");
 				}
 				else {
-					$("nav a:eq(12)").parent().removeClass("active");
+					$("nav a:eq(10)").parent().removeClass("active");
 				}
 				$(".img-rounded").rotate(window.images[window.imageSelected].getAngle());
 				$(".img-rounded").attr("src", window.images[window.imageSelected].getLocation());
 			}
 			else if($(this).attr("temp-title") == "Last Page") {
 				window.imageSelected = window.images.length - 1;
-				$("nav a:eq(6), nav a:eq(7)").removeClass("disabled");
+				$("nav a:eq(4), nav a:eq(5)").removeClass("disabled");
 				$("li .navbar-text").html((window.imageSelected + 1) + " of " + window.images.length);
-				$("nav a:eq(8), nav a:eq(9)").addClass("disabled");
+				$("nav a:eq(6), nav a:eq(7)").addClass("disabled");
 				if(window.images[window.imageSelected].getFitWidth()) {
-					$("nav a:eq(13)").parent().addClass("active");
+					$("nav a:eq(11)").parent().addClass("active");
 				}
 				else {
-					$("nav a:eq(13)").parent().removeClass("active");
+					$("nav a:eq(11)").parent().removeClass("active");
 				}
 				if(window.images[window.imageSelected].getFitHeight()) {
-					$("nav a:eq(12)").parent().addClass("active");
+					$("nav a:eq(10)").parent().addClass("active");
 				}
 				else {
-					$("nav a:eq(12)").parent().removeClass("active");
+					$("nav a:eq(10)").parent().removeClass("active");
 				}
 				$(".img-rounded").rotate(window.images[window.imageSelected].getAngle());
 				$(".img-rounded").attr("src", window.images[window.imageSelected].getLocation());
@@ -605,7 +597,7 @@
 				$(".img-rounded").elevateZoom({zoomType: "inner", cursor: "zoom-in", zoomEnabled: $(this).parent().hasClass("active")});
 			}
 			else if($(this).attr("temp-title") == "Fit Width") {
-				$("nav a:eq(0), nav a:eq(1), nav a:eq(2), nav a:eq(3), nav a:eq(12), nav a:eq(13)").parent().addClass("disabled");
+				$("nav a:eq(0), nav a:eq(1), nav a:eq(2), nav a:eq(3), nav a:eq(10), nav a:eq(11)").parent().addClass("disabled");
 				$(this).parent().toggleClass("active");
 				window.images[window.imageSelected].setFitWidth($(this).parent().hasClass("active"));
 				var data = JSON.stringify({image_location: window.images[window.imageSelected].getLocation()});
@@ -620,7 +612,7 @@
 						console.log(date);
 						window.images[window.imageSelected].setLocation(data.image_location);
 						$(".img-rounded").attr("src", window.images[window.imageSelected].getLocation());
-						$("nav a:eq(0), nav a:eq(1), nav a:eq(2), nav a:eq(3), nav a:eq(12), nav a:eq(13)").parent().removeClass("disabled");
+						$("nav a:eq(0), nav a:eq(1), nav a:eq(2), nav a:eq(3), nav a:eq(10), nav a:eq(11)").parent().removeClass("disabled");
 					},
 					error: function(xhr, status, error) {
 						try
@@ -632,12 +624,12 @@
 						{
 							alert("Check that Scan It Service is running on your computer");
 						}
-						$("nav a:eq(0), nav a:eq(1), nav a:eq(2), nav a:eq(3), nav a:eq(12), nav a:eq(13)").parent().removeClass("disabled");
+						$("nav a:eq(0), nav a:eq(1), nav a:eq(2), nav a:eq(3), nav a:eq(10), nav a:eq(11)").parent().removeClass("disabled");
 					}
 				});
 			}
 			else if($(this).attr("temp-title") == "Fit Height") {
-				$("nav a:eq(0), nav a:eq(1), nav a:eq(2), nav a:eq(3), nav a:eq(12), nav a:eq(13)").parent().addClass("disabled");
+				$("nav a:eq(0), nav a:eq(1), nav a:eq(2), nav a:eq(3), nav a:eq(10), nav a:eq(11)").parent().addClass("disabled");
 				$(this).parent().toggleClass("active");
 				window.images[window.imageSelected].setFitHeight($(this).parent().hasClass("active"));
 				var data = JSON.stringify({image_location: window.images[window.imageSelected].getLocation()});
@@ -652,7 +644,7 @@
 						console.log(data);
 						window.images[window.imageSelected].setLocation(data.image_location);
 						$(".img-rounded").attr("src", window.images[window.imageSelected].getLocation());
-						$("nav a:eq(0), nav a:eq(1), nav a:eq(2), nav a:eq(3), nav a:eq(12), nav a:eq(13)").parent().removeClass("disabled");
+						$("nav a:eq(0), nav a:eq(1), nav a:eq(2), nav a:eq(3), nav a:eq(10), nav a:eq(11)").parent().removeClass("disabled");
 					},
 					error: function(xhr, status, error) {
 						try
@@ -664,7 +656,7 @@
 						{
 							alert("Check that Scan It Service is running on your computer");
 						}
-						$("nav a:eq(0), nav a:eq(1), nav a:eq(2), nav a:eq(3), nav a:eq(12), nav a:eq(13)").parent().removeClass("disabled");
+						$("nav a:eq(0), nav a:eq(1), nav a:eq(2), nav a:eq(3), nav a:eq(10), nav a:eq(11)").parent().removeClass("disabled");
 					}
 				});
 			}

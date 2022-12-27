@@ -190,76 +190,77 @@
 						url: modalUrls[0],
 						success: function (data) {
 							console.log(data);
-							if (data.feeder_enableds != null) {
-								$(".modal-body input[type=checkbox]:first").attr("data-on", data.feeder_enableds[0]);
-								$(".modal-body input[type=checkbox]:first").parent().find(".toggle-group>label:first").html(data.feeder_enableds[0]);
-								$(".modal-body input[type=checkbox]:first").attr("data-off", data.feeder_enableds[1]);
-								$(".modal-body input[type=checkbox]:first").parent().find(".toggle-group>label:nth-child(2)").html(data.feeder_enableds[1]);
-								$(".modal-body input[type=checkbox]:first").bootstrapToggle();
-							}
-							else {
+							// if (data.feeder_enableds != null) {
 								$(".modal-body input[type=checkbox]:first").attr("data-on", "Enabled");
 								$(".modal-body input[type=checkbox]:first").parent().find(".toggle-group>label:first").html("Enabled");
 								$(".modal-body input[type=checkbox]:first").attr("data-off", "Disabled");
 								$(".modal-body input[type=checkbox]:first").parent().find(".toggle-group>label:nth-child(2)").html("Disabled");
-								$(".modal-body input[type=checkbox]:first").bootstrapToggle("off");
-								$(".modal-body input[type=checkbox]:first").prop("disabled", true);
-							}
-							if (data.auto_feeds != null) {
-								$(".modal-body input[type=checkbox]:eq(1)").attr("data-on", data.auto_feeds[0]);
-								$(".modal-body input[type=checkbox]:eq(1)").parent().find(".toggle-group>label:first").html(data.auto_feeds[0]);
-								$(".modal-body input[type=checkbox]:eq(1)").attr("data-off", data.auto_feeds[1]);
-								$(".modal-body input[type=checkbox]:eq(1)").parent().find(".toggle-group>label:nth-child(2)").html(data.auto_feeds[1]);
-								$(".modal-body input[type=checkbox]:eq(1)").bootstrapToggle();
-							}
-							else {
+								$(".modal-body input[type=checkbox]:first").bootstrapToggle();
+							// }
+							// else {
+							// 	$(".modal-body input[type=checkbox]:first").attr("data-on", "Enabled");
+							// 	$(".modal-body input[type=checkbox]:first").parent().find(".toggle-group>label:first").html("Enabled");
+							// 	$(".modal-body input[type=checkbox]:first").attr("data-off", "Disabled");
+							// 	$(".modal-body input[type=checkbox]:first").parent().find(".toggle-group>label:nth-child(2)").html("Disabled");
+							// 	$(".modal-body input[type=checkbox]:first").bootstrapToggle("off");
+							// 	$(".modal-body input[type=checkbox]:first").prop("disabled", true);
+							// }
+							// if (data.auto_feeds != null) {
 								$(".modal-body input[type=checkbox]:eq(1)").attr("data-on", "Enabled");
 								$(".modal-body input[type=checkbox]:eq(1)").parent().find(".toggle-group>label:first").html("Enabled");
 								$(".modal-body input[type=checkbox]:eq(1)").attr("data-off", "Disabled");
 								$(".modal-body input[type=checkbox]:eq(1)").parent().find(".toggle-group>label:nth-child(2)").html("Disabled");
-								$(".modal-body input[type=checkbox]:eq(1)").bootstrapToggle("off");
-								$(".modal-body input[type=checkbox]:eq(1)").prop("disabled", true);
-							}
-							if (data.auto_discard_blank_pagess != null) {
-								$(".modal-body input[type=checkbox]:eq(2)").attr("data-on", data.auto_discard_blank_pagess[0]);
-								$(".modal-body input[type=checkbox]:eq(2)").parent().find(".toggle-group>label:first").html(data.auto_discard_blank_pagess[0]);
-								$(".modal-body input[type=checkbox]:eq(2)").attr("data-off", data.auto_discard_blank_pagess[1]);
-								$(".modal-body input[type=checkbox]:eq(2)").parent().find(".toggle-group>label:nth-child(2)").html(data.auto_discard_blank_pagess[1]);
-								$(".modal-body input[type=checkbox]:eq(2)").bootstrapToggle();
-							}
-							else {
+								$(".modal-body input[type=checkbox]:eq(1)").bootstrapToggle();
+							// }
+							// else {
+							// 	$(".modal-body input[type=checkbox]:eq(1)").attr("data-on", "Enabled");
+							// 	$(".modal-body input[type=checkbox]:eq(1)").parent().find(".toggle-group>label:first").html("Enabled");
+							// 	$(".modal-body input[type=checkbox]:eq(1)").attr("data-off", "Disabled");
+							// 	$(".modal-body input[type=checkbox]:eq(1)").parent().find(".toggle-group>label:nth-child(2)").html("Disabled");
+							// 	$(".modal-body input[type=checkbox]:eq(1)").bootstrapToggle("off");
+							// 	$(".modal-body input[type=checkbox]:eq(1)").prop("disabled", true);
+							// }
+							// if (data.auto_discard_blank_pagess != null) {
+							// 	$(".modal-body input[type=checkbox]:eq(2)").attr("data-on", data.auto_discard_blank_pagess[0]);
+							// 	$(".modal-body input[type=checkbox]:eq(2)").parent().find(".toggle-group>label:first").html(data.auto_discard_blank_pagess[0]);
+							// 	$(".modal-body input[type=checkbox]:eq(2)").attr("data-off", data.auto_discard_blank_pagess[1]);
+							// 	$(".modal-body input[type=checkbox]:eq(2)").parent().find(".toggle-group>label:nth-child(2)").html(data.auto_discard_blank_pagess[1]);
+							// 	$(".modal-body input[type=checkbox]:eq(2)").bootstrapToggle();
+							// }
+							// else {
 								$(".modal-body input[type=checkbox]:eq(2)").attr("data-on", "Enabled");
 								$(".modal-body input[type=checkbox]:eq(2)").parent().find(".toggle-group>label:first").html("Enabled");
 								$(".modal-body input[type=checkbox]:eq(2)").attr("data-off", "Disabled");
 								$(".modal-body input[type=checkbox]:eq(2)").parent().find(".toggle-group>label:nth-child(2)").html("Disabled");
 								$(".modal-body input[type=checkbox]:eq(2)").bootstrapToggle("off");
 								$(".modal-body input[type=checkbox]:eq(2)").prop("disabled", true);
-							}
-							if (data.automatic_border_detections != null) {
-								$(".modal-body input[type=checkbox]:eq(3)").attr("data-on", data.automatic_border_detections[0]);
-								$(".modal-body input[type=checkbox]:eq(3)").parent().find(".toggle-group>label:first").html(data.automatic_border_detections[0]);
-								$(".modal-body input[type=checkbox]:eq(3)").attr("data-off", data.automatic_border_detections[1]);
-								$(".modal-body input[type=checkbox]:eq(3)").parent().find(".toggle-group>label:nth-child(2)").html(data.automatic_border_detections[1]);
-								$(".modal-body input[type=checkbox]:eq(3)").bootstrapToggle();
-							}
-							else {
+							// }
+							// if (data.automatic_border_detections != null) {
 								$(".modal-body input[type=checkbox]:eq(3)").attr("data-on", "Enabled");
 								$(".modal-body input[type=checkbox]:eq(3)").parent().find(".toggle-group>label:first").html("Enabled");
 								$(".modal-body input[type=checkbox]:eq(3)").attr("data-off", "Disabled");
 								$(".modal-body input[type=checkbox]:eq(3)").parent().find(".toggle-group>label:nth-child(2)").html("Disabled");
 								$(".modal-body input[type=checkbox]:eq(3)").bootstrapToggle("off");
 								$(".modal-body input[type=checkbox]:eq(3)").prop("disabled", true);
-							}
+							// }
+							// else {
+							// 	$(".modal-body input[type=checkbox]:eq(3)").attr("data-on", "Enabled");
+							// 	$(".modal-body input[type=checkbox]:eq(3)").parent().find(".toggle-group>label:first").html("Enabled");
+							// 	$(".modal-body input[type=checkbox]:eq(3)").attr("data-off", "Disabled");
+							// 	$(".modal-body input[type=checkbox]:eq(3)").parent().find(".toggle-group>label:nth-child(2)").html("Disabled");
+							// 	$(".modal-body input[type=checkbox]:eq(3)").bootstrapToggle("off");
+							// 	$(".modal-body input[type=checkbox]:eq(3)").prop("disabled", true);
+							// }
 							$(".modal-body input[type=checkbox]:eq(4)").attr("data-on", "Enabled");
 							$(".modal-body input[type=checkbox]:eq(4)").parent().find(".toggle-group>label:first").html("Enabled");
 							$(".modal-body input[type=checkbox]:eq(4)").attr("data-off", "Disabled");
 							$(".modal-body input[type=checkbox]:eq(4)").parent().find(".toggle-group>label:nth-child(2)").html("Disabled");
 							$(".modal-body input[type=checkbox]:eq(4)").bootstrapToggle("off");
 							$(".modal-body input[type=checkbox]:eq(4)").prop("disabled", true);
-							$(".modal-body .dropdown:first>ul").append("<li><a href='#' class='text-center'>FirstPageFirst</a></li>")
-							$(".modal-body .dropdown:eq(1)>ul").append("<li><a href='#' class='text-center'>RGB</a></li>")
-							$(".modal-body .dropdown:eq(2)>ul").append("<li><a href='#' class='text-center'>24 bit</a></li>")
-							$(".modal-body .dropdown:eq(3)>ul").append("<li><a href='#' class='text-center'>150 dpi</a></li>")
+							$(".modal-body .dropdown:first>ul").append("<li><a href='#' class='text-center'>FirstPageFirst</a></li>");
+							$(".modal-body .dropdown:eq(1)>ul").append("<li><a href='#' class='text-center'>RGB</a></li>");
+							$(".modal-body .dropdown:eq(2)>ul").append("<li><a href='#' class='text-center'>24 bit</a></li>");
+							$(".modal-body .dropdown:eq(3)>ul").append("<li><a href='#' class='text-center'>150 dpi</a></li>");
 							$.ajax({
 								type: "POST",
 								dataType: "json",
@@ -271,6 +272,7 @@
 									$(".modal-body input[type=checkbox]:eq(1)").bootstrapToggle("on");
 									$(".modal-body input[type=checkbox]:eq(2)").bootstrapToggle("off"); // auto discard blank pages
 									$(".modal-body input[type=checkbox]:eq(3)").bootstrapToggle("off"); // auto border detection
+									$(".modal-body .dropdown:first>ul").parents(".dropdown").find(".btn").html("<span>FirstPageFirst</span><span class='caret'></span>");
 									$(".modal-body .dropdown:eq(1)>ul").parents(".dropdown").find(".btn").html("<span>RGB</span><span class='caret'></span>");
 									$(".modal-body .dropdown:eq(1)>ul").parents(".dropdown").find(".btn").val("RGB");
 									$(".modal-body .dropdown:eq(2)>ul").parents(".dropdown").find(".btn").html("<span>24 bit</span><span class='caret'></span>");
@@ -728,7 +730,7 @@
 </head>
 
 <body>
-	<p>Deleted comments</p>
+	<p>first page first</p>
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<ul class="nav navbar-nav">

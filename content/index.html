@@ -182,8 +182,47 @@
 				$("#modal .modal-footer").html(modalFooter);
 				var modalUrls = $(this).attr("modal-urls").split(",");
 				console.log(modalUrls);
-
-				if ($(".modal-title").text() == "Scanner Settings") {
+				if ($(".modal-title").text() == "اختيار جهاز الماسح الضوئي") {
+					$.ajax({
+						type: "POST",
+						dataType: "json",
+						url: modalUrls[0],
+						success: function (data) {
+							console.log(data);
+							for (scanner in data.scanners) {
+								$(".list-group").append("<a href='#' class='list-group-item'>" + data.scanners[scanner] + "</a>");
+							}
+							$.ajax({
+								type: "POST",
+								dataType: "json",
+								url: modalUrls[1],
+								success: function (data) {
+									console.log(data);
+									$(".list-group>a").filter(function () { return $(this).text() == data.scanner; }).addClass("active");
+								},
+								error: function (xhr, status, error) {
+									try {
+										var data = JSON.parse(xhr.responseText);
+									}
+									catch (exception) {
+										alert("الرجاء التأكد من أن برنامج الماسح الضوئي قيد التشغيل على جهازك");
+									}
+								}
+							});
+							$("#modal").modal({ backdrop: "static", keyboard: false });
+						},
+						error: function (xhr, status, error) {
+							try {
+								var data = JSON.parse(xhr.responseText);
+								alert(data.error);
+							}
+							catch (exception) {
+								alert("الرجاء التأكد من أن برنامج الماسح الضوئي قيد التشغيل على جهازك");
+							}
+						}
+					});
+				}
+				else if ($(".modal-title").text() == "إعدادات الماسح الضوئي") {
 					$.ajax({
 						type: "POST",
 						dataType: "json",
@@ -253,7 +292,7 @@
 						error: function (xhr, status, error) {
 							try {
 								var data = JSON.parse(xhr.responseText);
-								alert(data.error);
+								alert("data.error #1");
 							}
 							catch (exception) {
 								alert("الرجاء التأكد من أن برنامج الماسح الضوئي قيد التشغيل على جهازك");
@@ -261,7 +300,7 @@
 						}
 					});
 				}
-				else if ($(".modal-title").text() == "Scanning Document") {
+				else if ($(".modal-title").text() == "بدء المسح الضوئي") {
 					$("#modal").modal({ backdrop: "static", keyboard: false });
 					window.ajax = $.ajax({
 						type: "POST",
@@ -313,7 +352,7 @@
 							window.ajax = null;
 							try {
 								var data = JSON.parse(xhr.responseText);
-								alert(data.error);
+								alert("data.error #2");
 							}
 							catch (exception) {
 								alert("الرجاء التأكد من أن برنامج الماسح الضوئي قيد التشغيل على جهازك");
@@ -330,7 +369,7 @@
 						}
 					});
 				}
-				else if ($(".modal-title").text() == "Saving Document") {
+				else if ($(".modal-title").text() == "يتم حفظ التغييرات") {
 					$("#modal").modal({ backdrop: "static", keyboard: false });
 					var data = [];
 					for (image in window.images) {
@@ -365,7 +404,7 @@
 							delete data["content_deleted"];
 							parent.postMessage(data, "*");
 							$("#modal").modal("hide");
-							alert("تم تجهيز الملف بنجاح.. الرجاء الضغط على حفظ التغييرات للمتابعة");
+							alert("تم حفظ الملف.. الرجاء الضغط على زر الإغلاق لاستكمال تعبئة النموذج");
 							// if (!content_deleted && data.pdf_web_location != null) {
 							// 	window.open(data.pdf_web_location);
 							// }
@@ -376,10 +415,10 @@
 						error: function (xhr, status, error) {
 							try {
 								var data = JSON.parse(xhr.responseText);
-								alert(data.error);
+								alert("data.error #3");
 							}
 							catch (exception) {
-								alert("Check that Scan It Service is running on your computer");
+								alert("الرجاء التأكد من أن برنامج الماسح الضوئي قيد التشغيل على جهازك");
 							}
 							$("#modal").modal("hide");
 						}
@@ -500,10 +539,10 @@
 						error: function (xhr, status, error) {
 							try {
 								var data = JSON.parse(xhr.responseText);
-								alert(data.error);
+								alert("data.error #4");
 							}
 							catch (exception) {
-								alert("Check that Scan It Service is running on your computer");
+								alert("الرجاء التأكد من أن برنامج الماسح الضوئي قيد التشغيل على جهازك");
 							}
 							$("nav a:eq(0), nav a:eq(1), nav a:eq(2), nav a:eq(3), nav a:eq(10), nav a:eq(11)").parent().removeClass("disabled");
 						}
@@ -530,10 +569,10 @@
 						error: function (xhr, status, error) {
 							try {
 								var data = JSON.parse(xhr.responseText);
-								alert(data.error);
+								alert("data.error #5");
 							}
 							catch (exception) {
-								alert("Check that Scan It Service is running on your computer");
+								alert("الرجاء التأكد من أن برنامج الماسح الضوئي قيد التشغيل على جهازك");
 							}
 							$("nav a:eq(0), nav a:eq(1), nav a:eq(2), nav a:eq(3), nav a:eq(10), nav a:eq(11)").parent().removeClass("disabled");
 						}
@@ -563,10 +602,10 @@
 			});
 
 			$(".modal-header").delegate("button:first", "click", function (event) {
-				if ($(".modal-title").text() != "Scanning Document") {
+				if ($(".modal-title").text() != "بدء المسح الضوئي") {
 					$("#modal").modal("hide");
 				}
-				else if ($(".modal-title").text() == "Scanning Document" && window.ajax != null) {
+				else if ($(".modal-title").text() == "بدء المسح الضوئي" && window.ajax != null) {
 					window.ajax = null;
 					var modalUrl = $(this).attr("modal-url");
 					$.ajax({
@@ -616,10 +655,10 @@
 						error: function (xhr, status, error) {
 							try {
 								var data = JSON.parse(xhr.responseText);
-								alert(data.error);
+								alert("data.error #6");
 							}
 							catch (exception) {
-								alert("Check that Scan It Service is running on your computer");
+								alert("الرجاء التأكد من أن برنامج الماسح الضوئي قيد التشغيل على جهازك");
 							}
 						}
 					});
@@ -628,7 +667,7 @@
 
 			$(".modal-footer").delegate("button:first", "click", function (event) {
 				var modalUrl = $(this).attr("modal-url");
-				if ($(".modal-title").text() == "Select Scanner") {
+				if ($(".modal-title").text() == "اختيار جهاز الماسح الضوئي") {
 					var data = JSON.stringify({ scanner: $(".list-group>a[class*=active]").text() });
 					$.ajax({
 						type: "POST",
@@ -643,15 +682,15 @@
 						error: function (xhr, status, error) {
 							try {
 								var data = JSON.parse(xhr.responseText);
-								alert(data.error);
+								alert("data.error #7");
 							}
 							catch (exception) {
-								alert("Check that Scan It Service is running on your computer");
+								alert("الرجاء التأكد من أن برنامج الماسح الضوئي قيد التشغيل على جهازك");
 							}
 						}
 					});
 				}
-				else if ($(".modal-title").text() == "Scanner Settings") {
+				else if ($(".modal-title").text() == "إعدادات الماسح الضوئي") {
 					var data = JSON.stringify({ auto_discard_blank_pages: ($(".modal-body input[type=checkbox]:eq(2)").prop("checked") ? "Enabled" : "Disabled"), auto_feed: ($(".modal-body input[type=checkbox]:eq(3)").prop("checked") ? "Enabled" : "Disabled"), automatic_border_detection: ($(".modal-body input[type=checkbox]:eq(3)").prop("checked") ? "Enabled" : "Disabled"), bit_depth: $(".modal-body .dropdown:eq(2)>ul").parents(".dropdown").find(".btn").val(), feeder_enabled: ($(".modal-body input[type=checkbox]:first").prop("checked") ? "Enabled" : "Disabled"), feeder_order: $(".modal-body .dropdown:first>ul").parents(".dropdown").find(".btn").val(), pixel_type: $(".modal-body .dropdown:eq(1)>ul").parents(".dropdown").find(".btn").val(), resolution: $(".modal-body .dropdown:eq(3)>ul").parents(".dropdown").find(".btn").val() });
 					$.ajax({
 						type: "POST",
@@ -666,15 +705,15 @@
 						error: function (xhr, status, error) {
 							try {
 								var data = JSON.parse(xhr.responseText);
-								alert(data.error);
+								alert("data.error #8");
 							}
 							catch (exception) {
-								alert("Check that Scan It Service is running on your computer");
+								alert("الرجاء التأكد من أن برنامج الماسح الضوئي قيد التشغيل على جهازك");
 							}
 						}
 					});
 				}
-				else if ($(".modal-title").text() == "Scanning Document" && window.ajax != null) {
+				else if ($(".modal-title").text() == "بدء المسح الضوئي" && window.ajax != null) {
 					window.ajax = null;
 					$.ajax({
 						type: "POST",
@@ -696,13 +735,13 @@
 </head>
 
 <body>
-	<p>trying to capture file in the root document5</p>
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<ul class="nav navbar-nav">
 				<li class="navbar-left">
-					<a data-toggle="tooltip" data-placement="bottom" href="#" title="..." temp-title="Select Scanner"
-						modal-header="<button type='button' class='close'>&times;</button><h4 class='modal-title'>Select Scanner</h4>"
+					<a data-toggle="tooltip" data-placement="bottom" href="#" title="اختيار جهاز الماسح الضوئي"
+						temp-title="اختيار جهاز الماسح الضوئي"
+						modal-header="<button type='button' class='close'>&times;</button><h4 class='modal-title'>اختيار جهاز الماسح الضوئي</h4>"
 						modal-body="<div class='list-group'></div>"
 						modal-footer="<button type='button' class='btn btn-default' style='width: 100px' modal-url='../set_scanner/'>Ok</button><button type='button' class='btn btn-default' style='width: 100px'>Cancel</button>"
 						modal-urls="../get_scanners/,../get_scanner/">
@@ -711,8 +750,8 @@
 				</li>
 				<li class="navbar-left">
 					<a data-toggle="tooltip" data-placement="bottom" href="#" title="إعدادات الماسح الضوئي"
-						temp-title="Scanner Settings"
-						modal-header="<button type='button' class='close'>&times;</button><h4 class='modal-title'>Scanner Settings</h4>"
+						temp-title="إعدادات الماسح الضوئي"
+						modal-header="<button type='button' class='close'>&times;</button><h4 class='modal-title'>إعدادات الماسح الضوئي</h4>"
 						modal-body="<div class='row'> <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6' style='padding-bottom: 10px;'> <lable>Feeder:</label> <label class='checkbox-inline'> <input checked data-toggle='toggle' type='checkbox'  data-width='100'> </label> </div> <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6' style='padding-bottom: 10px;'> <lable>Auto Feed:</label> <label class='checkbox-inline'> <input checked data-toggle='toggle' type='checkbox'  data-width='100'> </label> </div> <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='padding-bottom: 10px;'> <lable>Feeder Order:</label> <div class='dropdown'> <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'> <span>Choose an Order</span> <span class='caret pull-right'></span> </button> <ul class='dropdown-menu'> </ul> </div> </div> <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='padding-bottom: 10px;'> <lable>Auto Discard Blank Pages:</label> <label class='checkbox-inline'> <input checked data-toggle='toggle' type='checkbox'  data-width='100'> </label> </div> <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='padding-bottom: 10px;'> <lable>Automatic Border Detection:</label> <label class='checkbox-inline'> <input checked data-toggle='toggle' type='checkbox'  data-width='100'> </label> </div> <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='padding-bottom: 10px;'> <lable>Color:</label> <div class='dropdown'> <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'> <span>Choose a Color</span> <span class='caret pull-right'></span> </button> <ul class='dropdown-menu'> </ul> </div> </div> <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='padding-bottom: 10px;'> <lable>Color Depth:</label> <div class='dropdown'> <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'> <span>Choose a Color Depth</span> <span class='caret pull-right'></span> </button> <ul class='dropdown-menu'> </ul> </div> </div> <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='padding-bottom: 10px;'> <lable>Resolution:</label> <div class='dropdown'> <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'> <span>Choose a Color Depth</span> <span class='caret pull-right'></span> </button> <ul class='dropdown-menu'> </ul> </div> </div> </div>"
 						modal-footer="<button type='button' class='btn btn-default' style='width: 100px' modal-url='../set_properties/'>Ok</button><button type='button' class='btn btn-default' style='width: 100px'>Cancel</button>"
 						modal-urls="../get_available_properties,../get_properties/">
@@ -721,7 +760,7 @@
 				</li>
 				<li class="navbar-left">
 					<a data-toggle="tooltip" data-placement="bottom" href="#" title="بدء المسح الضوئي" temp-title="Scan"
-						modal-header="<button type='button' class='close' modal-url='../cancel_images/'>&times;</button><h4 class='modal-title'>Scanning Document</h4>"
+						modal-header="<button type='button' class='close' modal-url='../cancel_images/'>&times;</button><h4 class='modal-title'>بدء المسح الضوئي</h4>"
 						modal-body="<div class='progress'><div class='progress-bar progress-bar-striped active' role='progressbar' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100' style='width:100%'></div></div>"
 						modal-footer="<button type='button' class='btn btn-default' style='width: 100px' modal-url='../cancel_images/'>Cancel</button>"
 						modal-urls="../get_images">
@@ -729,9 +768,8 @@
 					</a>
 				</li>
 				<li class="navbar-left">
-					<a class="disabled" data-toggle="tooltip" data-placement="bottom" href="#"
-						title="حفظ الملف بصيغة PDF" temp-title="Save"
-						modal-header="<h4 class='modal-title'>Saving Document</h4>"
+					<a class="disabled" data-toggle="tooltip" data-placement="bottom" href="#" title="حفظ التغييرات"
+						temp-title="Save" modal-header="<h4 class='modal-title'>يتم حفظ التغييرات</h4>"
 						modal-body="<div class='progress'><div class='progress-bar progress-bar-striped active' role='progressbar' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100' style='width:100%'></div></div>"
 						modal-footer="" modal-urls="../set_images">
 						<img src="../content/img/save.png" />

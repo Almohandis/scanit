@@ -1,0 +1,461 @@
+2022-12-26 08:17:34,919 INFO - Opening Scan It Configurator
+2022-12-26 08:17:39,653 INFO - 2022-12-26 08:17:39,337 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was stopped.
+2022-12-26 08:17:39,653 INFO - Closing Scan It Service
+
+2022-12-26 08:17:40,650 INFO - 2022-12-26 08:17:39,842 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was started.
+2022-12-26 08:17:40,650 INFO - Closing Scan It Service
+
+2022-12-26 08:17:40,650 INFO - Service is restarted with new port 15000
+2022-12-26 08:49:13,481 INFO - Scan It configuration is set as follows: 
+Port: 15000
+Delete Content: No
+Command: 
+Hidden: Yes
+2022-12-26 08:49:13,512 INFO - Closing Scan It Configurator
+2022-12-26 08:49:20,029 INFO - Opening Scan It Configurator
+2022-12-26 08:49:21,854 INFO - Scan It configuration is set as follows: 
+Port: 15000
+Delete Content: No
+Command: 
+Hidden: Yes
+2022-12-26 08:49:21,854 INFO - Closing Scan It Configurator
+2022-12-26 09:00:45,095 INFO - Opening Scan It Configurator
+2022-12-26 09:00:49,460 INFO - Scan It configuration is set as follows: 
+Port: 15000
+Delete Content: No
+Command: 
+Hidden: Yes
+2022-12-26 09:00:49,471 INFO - Closing Scan It Configurator
+2022-12-26 11:10:41,032 INFO - Opening Scan It Configurator
+2022-12-26 11:13:45,145 INFO - 2022-12-26 11:13:44,802 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was stopped.
+2022-12-26 11:13:45,133 INFO - Closing Scan It Service
+
+2022-12-26 11:13:46,150 INFO - 2022-12-26 11:13:45,336 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was started.
+2022-12-26 11:13:46,141 INFO - Closing Scan It Service
+
+2022-12-26 11:13:46,150 INFO - Service is restarted with new port 15000
+2022-12-26 11:17:31,618 INFO - 2022-12-26 11:17:31,295 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was stopped.
+2022-12-26 11:17:31,610 INFO - Closing Scan It Service
+
+2022-12-26 11:17:32,629 INFO - 2022-12-26 11:17:31,811 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was started.
+2022-12-26 11:17:32,628 INFO - Closing Scan It Service
+
+2022-12-26 11:17:32,629 INFO - Service is restarted with new port 15000
+2022-12-26 11:17:41,952 INFO - User deleted content in C:\Program Files (x86)\Scan It\content\img\
+2022-12-26 11:17:45,566 INFO - 2022-12-26 11:17:45,243 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was stopped.
+2022-12-26 11:17:45,566 INFO - Closing Scan It Service
+
+2022-12-26 11:17:46,601 INFO - 2022-12-26 11:17:45,756 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was started.
+2022-12-26 11:17:46,576 INFO - Closing Scan It Service
+
+2022-12-26 11:17:46,601 INFO - Service is restarted with new port 15000
+2022-12-26 11:18:11,116 INFO - 2022-12-26 11:18:10,803 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was stopped.
+2022-12-26 11:18:11,110 INFO - Closing Scan It Service
+
+2022-12-26 11:18:12,116 INFO - 2022-12-26 11:18:11,302 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was started.
+2022-12-26 11:18:12,106 INFO - Closing Scan It Service
+
+2022-12-26 11:18:12,116 INFO - Service is restarted with new port 15000
+2022-12-26 11:19:16,629 INFO - 2022-12-26 11:19:16,318 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was stopped.
+2022-12-26 11:19:16,628 INFO - Closing Scan It Service
+
+2022-12-26 11:19:17,644 INFO - 2022-12-26 11:19:16,824 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was started.
+2022-12-26 11:19:17,635 INFO - Closing Scan It Service
+
+2022-12-26 11:19:17,645 INFO - Service is restarted with new port 15000
+2022-12-26 11:42:46,375 INFO - 2022-12-26 11:42:46,044 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was stopped.
+2022-12-26 11:42:46,364 INFO - Closing Scan It Service
+
+2022-12-26 11:42:47,394 INFO - 2022-12-26 11:42:46,571 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was started.
+2022-12-26 11:42:47,385 INFO - Closing Scan It Service
+
+2022-12-26 11:42:47,394 INFO - Service is restarted with new port 15000
+2022-12-26 11:44:06,542 INFO - Scan It configuration is set as follows: 
+Port: 15000
+Delete Content: No
+Command: 
+Hidden: Yes
+2022-12-26 11:44:06,548 INFO - Closing Scan It Configurator
+2022-12-26 11:45:05,013 INFO - Opening Scan It Configurator
+2022-12-26 11:45:15,546 INFO - 2022-12-26 11:45:15,220 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was stopped.
+2022-12-26 11:45:15,542 INFO - Closing Scan It Service
+
+2022-12-26 11:45:26,251 INFO - 2022-12-26 11:45:15,811 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+Topshelf.Hosts.StartHost Error: 0 : The service failed to start., System.ServiceProcess.TimeoutException: Time out has expired and the operation has not been completed.
+   at System.ServiceProcess.ServiceController.WaitForStatus(ServiceControllerStatus desiredStatus, TimeSpan timeout)
+   at Topshelf.Runtime.Windows.WindowsHostEnvironment.StartService(String serviceName, TimeSpan startTimeOut)
+   at Topshelf.Hosts.StartHost.Run()
+2022-12-26 11:45:26,243 INFO - Closing Scan It Service
+
+2022-12-26 11:45:26,251 INFO - Service is restarted with new port 8000
+2022-12-26 11:45:37,049 INFO - 2022-12-26 11:45:36,987 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service is not running.
+The Scan-It-Service service was stopped.
+2022-12-26 11:45:37,049 INFO - Closing Scan It Service
+
+2022-12-26 11:45:47,730 INFO - 2022-12-26 11:45:37,224 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+Topshelf.Hosts.StartHost Error: 0 : The service failed to start., System.ServiceProcess.TimeoutException: Time out has expired and the operation has not been completed.
+   at System.ServiceProcess.ServiceController.WaitForStatus(ServiceControllerStatus desiredStatus, TimeSpan timeout)
+   at Topshelf.Runtime.Windows.WindowsHostEnvironment.StartService(String serviceName, TimeSpan startTimeOut)
+   at Topshelf.Hosts.StartHost.Run()
+2022-12-26 11:45:47,720 INFO - Closing Scan It Service
+
+2022-12-26 11:45:47,731 INFO - Service is restarted with new port 8000
+2022-12-26 11:46:33,663 INFO - 2022-12-26 11:46:33,601 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service is not running.
+The Scan-It-Service service was stopped.
+2022-12-26 11:46:33,648 INFO - Closing Scan It Service
+
+2022-12-26 11:46:34,643 INFO - 2022-12-26 11:46:33,837 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was started.
+2022-12-26 11:46:34,643 INFO - Closing Scan It Service
+
+2022-12-26 11:46:34,653 INFO - Service is restarted with new port 8001
+2022-12-26 11:49:35,618 INFO - 2022-12-26 11:49:35,303 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was stopped.
+2022-12-26 11:49:35,618 INFO - Closing Scan It Service
+
+2022-12-26 11:49:36,638 INFO - 2022-12-26 11:49:35,808 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was started.
+2022-12-26 11:49:36,613 INFO - Closing Scan It Service
+
+2022-12-26 11:49:36,638 INFO - Service is restarted with new port 15000
+2022-12-26 11:51:37,223 INFO - Scan It configuration is set as follows: 
+Port: 15000
+Delete Content: No
+Command: 
+Hidden: Yes
+2022-12-26 11:51:37,229 INFO - Closing Scan It Configurator
+2022-12-26 12:00:52,571 INFO - Opening Scan It Configurator
+2022-12-26 12:00:54,487 INFO - 2022-12-26 12:00:54,424 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service is not running.
+The Scan-It-Service service was stopped.
+2022-12-26 12:00:54,471 INFO - Closing Scan It Service
+
+2022-12-26 12:00:55,491 INFO - 2022-12-26 12:00:54,661 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was started.
+2022-12-26 12:00:55,481 INFO - Closing Scan It Service
+
+2022-12-26 12:00:55,491 INFO - Service is restarted with new port 15000
+2022-12-26 12:44:17,813 INFO - 2022-12-26 12:44:17,483 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was stopped.
+2022-12-26 12:44:17,806 INFO - Closing Scan It Service
+
+2022-12-26 12:44:18,823 INFO - 2022-12-26 12:44:17,993 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was started.
+2022-12-26 12:44:18,823 INFO - Closing Scan It Service
+
+2022-12-26 12:44:18,833 INFO - Service is restarted with new port 15000
+2022-12-26 13:07:45,646 INFO - 2022-12-26 13:07:45,312 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was stopped.
+2022-12-26 13:07:45,628 INFO - Closing Scan It Service
+
+2022-12-26 13:07:46,668 INFO - 2022-12-26 13:07:45,838 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was started.
+2022-12-26 13:07:46,644 INFO - Closing Scan It Service
+
+2022-12-26 13:07:46,668 INFO - Service is restarted with new port 15000
+2022-12-26 13:08:03,314 INFO - 2022-12-26 13:08:02,981 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was stopped.
+2022-12-26 13:08:03,314 INFO - Closing Scan It Service
+
+2022-12-26 13:08:04,344 INFO - 2022-12-26 13:08:03,493 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was started.
+2022-12-26 13:08:04,324 INFO - Closing Scan It Service
+
+2022-12-26 13:08:04,344 INFO - Service is restarted with new port 15000
+2022-12-26 13:08:57,131 INFO - User deleted content in C:\Program Files (x86)\Scan It\content\img\
+2022-12-26 13:09:00,284 INFO - 2022-12-26 13:08:59,970 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was stopped.
+2022-12-26 13:09:00,277 INFO - Closing Scan It Service
+
+2022-12-26 13:09:01,334 INFO - 2022-12-26 13:09:00,484 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was started.
+2022-12-26 13:09:01,325 INFO - Closing Scan It Service
+
+2022-12-26 13:09:01,334 INFO - Service is restarted with new port 15000
+2022-12-26 13:10:40,246 INFO - 2022-12-26 13:10:39,936 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was stopped.
+2022-12-26 13:10:40,244 INFO - Closing Scan It Service
+
+2022-12-26 13:10:41,264 INFO - 2022-12-26 13:10:40,443 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was started.
+2022-12-26 13:10:41,253 INFO - Closing Scan It Service
+
+2022-12-26 13:10:41,264 INFO - Service is restarted with new port 15000
+2022-12-26 13:10:44,561 INFO - Scan It configuration is set as follows: 
+Port: 15000
+Delete Content: No
+Command: 
+Hidden: Yes
+2022-12-26 13:10:44,568 INFO - Closing Scan It Configurator
+2022-12-26 13:14:40,367 INFO - Opening Scan It Configurator
+2022-12-26 13:14:44,668 INFO - 2022-12-26 13:14:44,346 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was stopped.
+2022-12-26 13:14:44,663 INFO - Closing Scan It Service
+
+2022-12-26 13:14:45,678 INFO - 2022-12-26 13:14:44,853 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was started.
+2022-12-26 13:14:45,668 INFO - Closing Scan It Service
+
+2022-12-26 13:14:45,678 INFO - Service is restarted with new port 15000
+2022-12-26 13:49:31,253 INFO - Closing Scan It Configurator
+2022-12-26 18:18:46,453 INFO - Opening Scan It Configurator
+2022-12-26 18:18:48,157 INFO - 2022-12-26 18:18:47,827 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was stopped.
+2022-12-26 18:18:48,157 INFO - Closing Scan It Service
+
+2022-12-26 18:18:49,167 INFO - 2022-12-26 18:18:48,347 INFO - Opening Scan It Service
+Configuration Result:
+[Success] Name Scan-It-Service
+[Success] DisplayName Scan It Service
+[Success] Description Scan It Service
+[Success] ServiceName Scan-It-Service
+Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+The Scan-It-Service service was started.
+2022-12-26 18:18:49,157 INFO - Closing Scan It Service
+
+2022-12-26 18:18:49,167 INFO - Service is restarted with new port 15000
+2022-12-26 19:01:43,979 INFO - Scan It configuration is set as follows: 
+Port: 15000
+Delete Content: No
+Command: 
+Hidden: Yes
+2022-12-26 19:01:43,992 INFO - Closing Scan It Configurator
